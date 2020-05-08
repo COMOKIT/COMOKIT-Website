@@ -35,9 +35,24 @@ jobs:
 
       - name: Check content before releasing
         run: ls -la ./
-        
+
       - name: Prepare release folder
-        run: mkdir ./releaseFolder && mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/ && find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} releaseFolder \;
+        run: mkdir ./releaseFolder 
+
+      - name: Move built doc
+        run: mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/
+
+      - name: Check content during releasing
+        run: ls -la ./
+
+      - name: Check content before releasing
+        run: ls -la ./releaseFolder
+
+      - name: Move landing static page
+        run: find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} ./releaseFolder \;
+
+      - name: Check content before releasing
+        run: ls -la ./
 
       - name: Check content before releasing
         run: ls -la ./releaseFolder
