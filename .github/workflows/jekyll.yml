@@ -15,15 +15,17 @@ jobs:
         
       - name: Setup Ruby for use with actions
         uses: actions/setup-ruby@v1.0.0
-        #with:
-          # Version range or exact version of a Ruby version to use.
-          #version: # optional, default is >= 2.4
           
       - name: Bundle - check version
         run: bundle -v
       
+      # Have to cd every time
+      # Every command is isolated and position is not persistant
+      - name: Install just-the-docs
+        run: cd docs && gem install just-the-docs
+      
       - name: Install jenkyll plugins
-        run: cd docs && bundle install
+        run: cd docs && bundle install --full-index
 
       - name: Create search engine
         run: cd docs && bundle exec just-the-docs rake search:init
