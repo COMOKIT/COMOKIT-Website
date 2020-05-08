@@ -25,6 +25,9 @@ jobs:
       - name: Move to subfolder
         run: cd docs
       
+      - name: Where am I ?
+        run: ls -la
+      
       - name: Install jenkyll plugins
         run: bundle install
 
