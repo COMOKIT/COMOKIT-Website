@@ -34,7 +34,10 @@ jobs:
         run: cd docs && bundle exec jekyll build
 
       - name: Prepare release folder
-        run: mkdir releaseFolder && mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/ && find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} releaseFolder \;
+        run: mkdir ./releaseFolder && mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/ && find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} releaseFolder \;
+
+      - name: Check content before releasing
+        run: tree -L 3 -a
 
       - name: Upload to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.5.1
@@ -48,7 +51,7 @@ jobs:
           # Allow an empty commit to be created
           allow_empty_commit: false
           # Build directory to deploy
-          build_dir: releaseFolder
+          build_dir: ./releaseFolder
           # Commit author's name
           committer_name: Github Actions
           # Commit author's email
