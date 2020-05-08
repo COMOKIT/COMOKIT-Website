@@ -34,7 +34,7 @@ jobs:
         run: cd docs && bundle exec jekyll build
 
       - name: Prepare release folder
-        run: setopt extended_glob && mv ./docs/_site ./ && rm -fr docs && mkdir releaseFolder && mv ./_site ./releaseFolder/docs && mv -- {^,}releaseFolder
+        run: mv ./docs/_site ./ && rm -fr docs && mkdir releaseFolder && mv ./_site ./releaseFolder/docs &&  find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} releaseFolder \;
 
       - name: Upload to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.3.0
