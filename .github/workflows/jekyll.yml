@@ -33,23 +33,17 @@ jobs:
       - name: Build website
         run: cd docs && bundle exec jekyll build
 
-      - name: Check content before releasing
-        run: ls -la ./
-
-      - name: Prepare release folder
-        run: mkdir ./releaseFolder 
-
       - name: Move built doc
         run: mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/
-
-      - name: Check content during releasing
-        run: ls -la ./
-
-      - name: Check content before releasing
-        run: ls -la ./releaseFolder
-
-      - name: Check find command
+        
+      - name: Check find command exec
         run: find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder"
+
+      - name: Check find command full
+        run: find . -maxdepth 1 
+
+      - name: Check find command double not
+        run: find . -maxdepth 1 -not -name ".*"
         
       - name: Move landing static page
         run: find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} ./releaseFolder \;
