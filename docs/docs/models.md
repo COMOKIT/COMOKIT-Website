@@ -8,6 +8,11 @@ permalink: /modelsUsed
 # Models used in COMOKIT
 {: .no_toc }
 
+<!--
+Short text
+{: .fs-6 .fw-300 }
+-->
+
 ## Table of contents
 {: .no_toc .text-delta }
 

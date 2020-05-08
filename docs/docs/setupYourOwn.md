@@ -20,11 +20,11 @@ How to setup COMOKIT with your own data
 
 ---
 
-# Prerequite
+## Prerequite
 
-You'll need to have a GAMA with COMOKIT installed and running. If you don't know how to do so, please refer to the [previous documentation page](/gettingStarted)
+You'll need to have a GAMA with COMOKIT installed and running. If you don't know how to do so, please refer to the [previous documentation page](gettingStarted)
 
-# Required Data
+## Required Data
 
 The model requires a minimal dataset that should be, at least, composed of:
 
@@ -70,6 +70,6 @@ The model requires a minimal dataset that should be, at least, composed of:
 | Parameter_1_onset_to_recovery | First parameter of the distribution for the onset to recovery period | Real | 3.034953 |
 | Parameter_2_onset_to_recovery | Second parameter of the distribution for the onset to recovery period | Real | 0.34 |
 
-# Tutorial video
+## Tutorial video
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sQI63mgtYi4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

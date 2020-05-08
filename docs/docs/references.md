@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Scientific References
-nav_order: 4
+nav_order: 999
 permalink: /references
 ---
 
@@ -20,7 +20,7 @@ This page contains a subset of the scientific papers that have been written eith
 
 ---
 
-# Papers about COMOKIT
+## Papers about COMOKIT
 
 - Drogoul, A., Taillandier, P., Gaudou, B., Choisy, M., Chapuis, K., Huynh, N. Q. , Nguyen, N. D., Philippon, D., Brugière, A., and Larmande, P. (2020) Designing social simulation to (seriously) support decision-making: COMOKIT, an agent-based modelling toolkit to analyze and compare the impacts of public health interventions against COVID-19 . Review of Artificial Societies and Social Simulation, 27th April 2020. [https://rofasss.org/2020/04/27/comokit/](https://rofasss.org/2020/04/27/comokit/)
 
