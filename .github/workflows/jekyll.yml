@@ -48,6 +48,9 @@ jobs:
       - name: Check content before releasing
         run: ls -la ./releaseFolder
 
+      - name: Check find command
+        run: find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder"
+        
       - name: Move landing static page
         run: find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} ./releaseFolder \;
 
