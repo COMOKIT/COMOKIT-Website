@@ -37,7 +37,7 @@ jobs:
         run: mkdir ./releaseFolder && mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/ && find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} releaseFolder \;
 
       - name: Check content before releasing
-        run: tree -L 3 -a
+        run: ls -la ./releaseFolder
 
       - name: Upload to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.5.1
