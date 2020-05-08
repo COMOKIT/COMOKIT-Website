@@ -34,10 +34,10 @@ jobs:
         run: cd docs && bundle exec jekyll build
 
       - name: Prepare release folder
-        run: mv ./docs/_site ./ && rm -fr docs && mkdir releaseFolder && mv ./_site ./releaseFolder/docs &&  find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} releaseFolder \;
+        run: mkdir releaseFolder && mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/ && find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} releaseFolder \;
 
       - name: Upload to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v1.3.0
+        uses: crazy-max/ghaction-github-pages@v1.5.1
         with:
           # GitHub repository where assets will be deployed (default current)
           #repo: # optional
