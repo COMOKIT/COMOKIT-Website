@@ -22,23 +22,17 @@ jobs:
       - name: Bundle - check version
         run: bundle -v
       
-      - name: Move to subfolder
-        run: cd docs
-      
-      - name: Where am I ?
-        run: ls -la
-      
       - name: Install jenkyll plugins
-        run: bundle install
+        run: cd docs && bundle install
 
       - name: Create search engine
-        run: bundle exec just-the-docs rake search:init
+        run: cd docs && bundle exec just-the-docs rake search:init
 
       - name: Build website
-        run: bundle exec jekyll build
+        run: cd docs && bundle exec jekyll build
 
       - name: Prepare release folder
-        run: mv _site ../ && cd .. && rm -fr docs && mkdir releaseFolder && mv ./_site ./releaseFolder/docs && mv * ./releaseFolder
+        run: setopt extended_glob && mv ./docs/_site ./ && rm -fr docs && mkdir releaseFolder && mv ./_site ./releaseFolder/docs && mv -- {^,}releaseFolder
 
       - name: Upload to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.3.0
