@@ -39,23 +39,8 @@ jobs:
       - name: Move built doc
         run: mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/
         
-      - name: Check find command exec
-        run: find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder"
-
-      - name: Check find command full
-        run: find . -maxdepth 1 
-
-      - name: Check find command double not
-        run: find . -maxdepth 1 -not -name ".*"
-        
       - name: Move landing static page
-        run: find . -maxdepth 1 -wholename "./[a-Z]*" -not -name "releaseFolder" -exec mv {} ./releaseFolder \;
-
-      - name: Check content before releasing
-        run: ls -la ./
-
-      - name: Check content before releasing
-        run: ls -la ./releaseFolder
+        run: find . -maxdepth 1 -not -name ".*" -not -name "releaseFolder" -exec mv {} ./releaseFolder \;
 
       - name: Upload to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1.5.1
