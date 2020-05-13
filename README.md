@@ -1,37 +1,71 @@
-## Welcome to GitHub Pages
+<p align="center">
+  
+  <p align="center">
+    COMOKIT-Website 📘
+    <br />
+    <br />
+    <img src="https://img.shields.io/github/license/COMOKIT/COMOKIT-Website" alt="License" />
+    ·
+    <img src="https://img.shields.io/github/issues/COMOKIT/COMOKIT-Website" alt="GitHub issues" />
+    ·
+    <img src="https://img.shields.io/github/contributors/COMOKIT/COMOKIT-Website" alt="GitHub contributors" />
+    <br />
+    <img src="https://github.com/COMOKIT/COMOKIT-Website/workflows/Jekyll%20site%20CI/badge.svg?branch=master" alt="Jekyll site CI" />
+    ·
+    <img src="https://img.shields.io/discord/690125443952672780?label=Discord" alt="Discord" />
+  </p>
+</p>
 
-You can use the [editor on GitHub](https://github.com/COMOKIT/comokit.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+This repository holds the Jekyll sources of the COMOKIT website!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## How the website works
 
-### Markdown
+There's 3 important place :
+- `/` The landing page of the website (isn't not generated yet => Raw HTML page)
+- `/docs` The generated documentation (use Jekyll x [Just-The-Doc](https://github.com/pmarsceill/just-the-docs))
+- `/ressources` Recommanded place to upload big/extra files (ODD PDF, etc)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### I want to update the documentation
 
-```markdown
-Syntax highlighted code block
+Please go to the `/docs/docs/` sub-folder to edit/add page (written in MarkDown) ;)
 
-# Header 1
-## Header 2
-### Header 3
+[> Click me <](https://github.com/COMOKIT/COMOKIT-Website/tree/master/docs/docs)
 
-- Bulleted
-- List
+The documentation part is using the [Just-The-Doc](https://github.com/pmarsceill/just-the-docs) framework. If you have some interrogation on how to edit the page, please refere to the [official documentation](https://pmarsceill.github.io/just-the-docs/)
 
-1. Numbered
-2. List
+## Technical part (Documentation part)
 
-**Bold** and _Italic_ and `Code` text
+### Local installation & Setup
 
-[Link](url) and ![Image](src)
-```
+First of all, make sure ruby is intalled on your computer.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+1. Clone the repo `git clone https://github.com/COMOKIT/COMOKIT-Website.git`
+1. Move in the folder `cd COMOKIT-Website/docs`
+1. Install the JTD framework `gem install just-the-docs`
+1. (Optional) Enable search `bundle exec just-the-docs rake search:init`
+1. Install plugins: `bundle install --full-index`
+1. Build your site: `bundle exec jekyll serve`
+1. Connect to your running instance [http://127.0.0.1:4000/docs/](http://127.0.0.1:4000/docs/)
 
-### Jekyll Themes
+### Global configuration of the doc part
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/COMOKIT/comokit.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+All the global configuration of the site can be found in the file [`_config.yml`](https://github.com/COMOKIT/COMOKIT-Website/blob/master/_config.yml) which is structured as follow :
 
-### Support or Contact
+## Bugs and Issues
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Have a bug or an issue with this template? [Open a new issue](https://github.com/COMOKIT/COMOKIT-Website/issues/new) here on GitHub!
+
+## Made with
+
+* Pipeline
+  * Jekyll
+  * GitHub Actions
+  * GitHub Pages
+
+* Front-end
+  * Raw HTML - Landing Page
+  * [Just-The-Doc](https://github.com/pmarsceill/just-the-docs) - Jekyll framework
+
+## Copyright and License
+
+The COMOKIT project is licensed under the [***GPL-3.0 License***](https://github.com/COMOKIT/COMOKIT-Model/blob/master/LICENSE).
