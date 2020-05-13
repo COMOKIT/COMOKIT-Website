@@ -62,7 +62,7 @@ jobs:
           # Commit message
           #commit_message: # optional
           # Write the given domain name to the CNAME file
-          #fqdn: # optional  
+          fqdn: comokit.org # optional  
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_PAT: ${{ secrets.GH_PAT_ROIARTHURB }}
