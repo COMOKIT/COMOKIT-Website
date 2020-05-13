@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: COMOKIT Documentation
 description: Documentation pages for COMOKIT
-baseurl: "/docs/" # the subpath of your site, e.g. /blog
-url: "https://comokit.github.io/COMOKIT-Website/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/docs" # the subpath of your site, e.g. /blog
+url: "https://comokit.github.io/COMOKIT-Website" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "lib/", "bin/", "Rakefile"]
