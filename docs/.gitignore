@@ -6,3 +6,5 @@ node_modules
 *.gem
 _site
 .Rhistory
+assets/js/search-data.json
+
