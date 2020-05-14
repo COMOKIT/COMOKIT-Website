@@ -134,6 +134,16 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 }
 
+.nav-menu .get-started-white a {
+  margin: 0 0 0 30px;
+  padding: 8px 23px;
+}
+
+.nav-menu .get-started-white a:hover {
+  font-size: 14px;
+  color: white;
+}
+
 .nav-menu .get-started a {
   background: #3498db;
   color: #fff;
