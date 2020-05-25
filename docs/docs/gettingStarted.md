@@ -51,6 +51,7 @@ GAMA Headless mode needs to set up an XML configuration file in order to run GAM
 
 - move to the folder pre-processing ``$ cd /path-to/COMOKIT-HPC/pre-processing``
 - run generateMultipleXML.py with parameter to create the XML file and run GAMA. Basic usage is described bellow.
+
 ``$ python3 generateMultipleXML.py -h
 usage: generateMultipleXML.py [options] -xml <experiment name> /path/to/file.gaml /path/to/file.xml
 
