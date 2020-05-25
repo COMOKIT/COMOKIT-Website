@@ -32,4 +32,6 @@ If you want to install and run the model yourself on your computer you should
 - Second download the model [on GitHub](https://github.com/COMOKIT/CoVid19) (click [here](https://github.com/COMOKIT/CoVid19/archive/master.zip) to download it automatically)
 - Extract that ZIP file somewhere on your computer and [import it on GAMA](https://gama-platform.github.io/wiki/ImportingModels) as a GAMA project.
 <img src='https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_menu_file_import.png' alt='Import a Gama project' width='600'/>
+<br>
+<img src='https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_dialog_import_projects.png' alt='Import a Gama project from a folder' width='600'/>
 - Enjoy our model running on your computer
