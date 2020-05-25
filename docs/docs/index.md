@@ -9,6 +9,9 @@ permalink: /
 # COMOKIT Documentation
 {: .no_toc }
 
+A [GAMA](http://gama-platform.org) model on the assessment and comparisons of intervention policies against the CoVid19 pandemics 
+{: .fs-6 .fw-300 }
+
 <p align="center">
   <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/como.jpg?raw=true">
 </p>
@@ -22,5 +25,5 @@ COMOKIT is a fairly complex integrated model that combines several specialized s
 - [Parameterizing simulations](parameterize) explains how to modify the input parameters used by the different sub-models. 
 - [Extending COMOKIT](setupYourOwn) covers how to prepare datasets so that COMOKIT can be applied to new case studies, and how to define new experiments 
 
-
+If you run into any trouble using GAMA, please do refer to th [official GAMA documentation](https://gama-platform.github.io/wiki/PlatformDocumentation)
 
