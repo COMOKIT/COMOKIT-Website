@@ -55,3 +55,12 @@ optional arguments:
   -xml <experiment name> /path/to/file.gaml /path/to/file.xml
                         Classical xml arguments
 ```
+
+**Testing Example**
+```
+$ python3 generateMultipleXML.py -xml "Headless" ~/COMOKIT-Model/COMOKIT/Experiments/Physical\ Interventions/Significance\ of\ Wearing\ Masks.gaml /tmp/headless/mask.xml -o ~/COMOKIT-HPC/results/ -f 2
+```
+**Running Example**
+```
+$ python3 generateMultipleXML.py -xml "Headless" ~/COMOKIT-Model/COMOKIT/Experiments/Physical\ Interventions/Significance\ of\ Wearing\ Masks.gaml /tmp/headless/mask.xml -o ~/COMOKIT-HPC/results/ -r 1000 -s 36 -f 5000
+```
