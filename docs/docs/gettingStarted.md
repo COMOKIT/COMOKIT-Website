@@ -40,5 +40,5 @@ If you want to install and run the model yourself on your computer you should
 - select an experiment to run. Bellow we selected the *Realistic Lockdown Durations.gaml* experiment.
 
 <p align="center">
-  <img  src="assets/images/Gama-launching-experiment.png?raw=true">
+  <img  src="/assets/images/Gama-launching-experiment.png?raw=true">
 </p>
