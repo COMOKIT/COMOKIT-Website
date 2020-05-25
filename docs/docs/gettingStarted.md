@@ -35,6 +35,8 @@ You can install and run COMOKIT by two way : you can download and run the _All-I
 
 Here you are, you have an instance of COMOKIT running on your computer.
 
+![Empty GAMA - COMOKIT](assets/images/GAMAxCOMOKIT-raw.png)
+
 ### Manual install (harder)
 
 If you want to install and run the model yourself on your computer you should 
@@ -52,7 +54,7 @@ If you want to install and run the model yourself on your computer you should
 - Launch your installed GAMA application
 - Select an experiment to run. Bellow we selected the *COMOKIT/Experiments/Lockdown/Realistic Lockdown Durations.gaml* experiment.
 
-![Realistic Lockdown Durations.gaml](https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/Gama-launching-experiment.png?raw=true)
+![Realistic Lockdown Durations.gaml](assets/images/Gama-launching-experiment.png?raw=true)
 
 - Click on the *Early containment* green button to run this experiment.
 - Select which city to run the experiment on.
