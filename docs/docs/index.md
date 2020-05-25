@@ -17,8 +17,9 @@ COMOKIT is a fairly complex integrated model that combines several specialized s
 {: .fs-6 .fw-300 }
 
 - [Getting started](gettingStarted) covers downloading, installing and launching the all-in-one version of COMOKIT (or importing COMOKIT into an existing [GAMA](http://gama-platform.org) installation) and executing predefined experiments. 
+- [Headless execution](headless) explains how to run experiments without graphical outputs, for example on an HPC infrastructure. 
 - [Parameterizing simulations](parameterize) explains how to modify the input parameters used by the different sub-models. 
-- [Extending COMOKIT](setupYourOwn) covers how to prepare datasets so that COMOKIT can be applied to new case studies and how to define new experiments 
+- [Extending COMOKIT](setupYourOwn) covers how to prepare datasets so that COMOKIT can be applied to new case studies, and how to define new experiments 
 
 
 
