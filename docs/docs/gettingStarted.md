@@ -25,44 +25,10 @@ How to run COMOKIT locally
 The base model represents the diffusion and transmission of COVID-19 at the scale of a commune (approx. 10.000 people in Vietnam) using an agent-based approach: each inhabitant is represented individually with his/her specific characteristics (age, sex, household), clinical state (susceptible, exposed, infected with or w/o symptoms, recovered or dead) and daily activities based on a generated agenda, which can be controlled and limited by an Authority agent whose role is to choose and apply a public health policy consisting of mitigation measures and interventions. Each set of parameters (incl. the policies applied) represents a scenario, which can be explored by running several simulations (to account for the stochasticity of each run) and compared against other scenarios in more elaborate experiments. COMOKIT makes it therefore very easy to assess, measure and compare the impacts of interventions on the spread of the virus. The data required to instantiate this base model on a specific case study is voluntarily limited; in most cases, only a file containing the built environment may be enough to build a simple model. More realistic scenarios will of course require more detailed datasets.
 
 ## Install it yourself
-### Install for GUI mode
+
 If you want to install and run the model yourself on your computer you should 
 
 - First, download and extract the [GAMA Continuous Build version](https://github.com/gama-platform/gama/releases/tag/continuous) (if you don't know which version to take, choose the one with JDK). If you need more information about how to install GAMA, check the [installation page](https://gama-platform.github.io/wiki/Installation)
 - Second download the model [on GitHub](https://github.com/COMOKIT/CoVid19) (click [here](https://github.com/COMOKIT/CoVid19/archive/master.zip) to download it automatically)
 - Extract that ZIP file somewhere on your computer and [import it on GAMA](https://gama-platform.github.io/wiki/ImportingModels).
 - Enjoy our model running on your computer
-
-### Install for Headless mode (command line and HPC use)
-
-[GAMA Headless mode](https://gama-platform.github.io/wiki/Headless) allows to run GAMA without Graphical interfaces. We developped some scripts allowing this configuration.
-
-- First, download the scripts from the [COMOKIT-HPC repository](https://github.com/COMOKIT/COMOKIT-HPC) or the direct link to clone the repository [here](https://github.com/COMOKIT/COMOKIT-HPC.git)
-- decompress the downloaded archive
-- open a terminal in your computer
-- move inside the folder
-``$ cd /path-to/COMOKIT-HPC``
-- run python command to downlad the requirements
-``$ pip install -r requirements.txt``
-
-#### How to use:
-#### Generate XML
-GAMA Headless mode needs to set up an XML configuration file in order to run GAMA. The HPC toolkit allows to generate it automatically.
-
-- move to the folder pre-processing ``$ cd /path-to/COMOKIT-HPC/pre-processing``
-- run generateMultipleXML.py with parameter to create the XML file and run GAMA. Basic usage is described bellow.
-
-```
-$ python3 generateMultipleXML.py -h
-usage: generateMultipleXML.py [options] -xml <experiment name> /path/to/file.gaml /path/to/file.xml
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -r INT, --replication INT
-                        Number of replication for each paramater space
-  -s INT, --split INT   Split XML file every S replications
-  -f INT, --final INT   Final step for simulations
-  -o STR, --output STR  Path to folder where save output CSV
-  -xml <experiment name> /path/to/file.gaml /path/to/file.xml
-                        Classical xml arguments
-```
