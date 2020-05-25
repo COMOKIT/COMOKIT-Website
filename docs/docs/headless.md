@@ -36,7 +36,7 @@ COMOKIT has also been made to explore his model and run in headless mode on serv
 
 ### Generate XML
 
-GAMA Headless mode needs to set up an XML configuration file in order to run GAMA. The HPC toolkit allows to generate it automatically.
+GAMA Headless mode needs an XML configuration file in order to run GAMA. The HPC toolkit allows to generate it automatically.
 
 - move to the folder pre-processing ``$ cd /path-to/COMOKIT-HPC/pre-processing``
 - run generateMultipleXML.py with parameter to create the XML file and run GAMA. Basic usage is described bellow.
