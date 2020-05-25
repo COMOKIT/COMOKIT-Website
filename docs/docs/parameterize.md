@@ -67,3 +67,12 @@ Each one has a built-in method to get a default value when data is missing or mi
 ## Activities
 
 ## Redefining parameter value
+
+As a general advice, parameters in ``Parameters.gaml`` and variables (e.g. in ``Global.gaml``) of COMOKIT should be redefined in user models: it is good practice to redefine them in a ``global`` section of a user created gaml file. For examples, to redefine the number of infected and recovered individuals at the beginning of a simulation, open or create a new gaml file, import all required from COMOKIT and assign new values as follow:
+```
+global {
+  int num_infected_init <- 10;
+  int num_recovered_init <- 500; 
+}
+```
+As a general guideline, do not change the values of parameters directly in the COMOKIT code, but rather in your own model that makes use of COMOKIT.
