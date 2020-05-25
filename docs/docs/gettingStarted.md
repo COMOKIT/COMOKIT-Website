@@ -37,4 +37,8 @@ If you want to install and run the model yourself on your computer you should
 
 [Headless mode](https://gama-platform.github.io/wiki/Headless) allows to run GAMA without Graphical interfaces. We developped some scripts allowing this configuration.
 
-- First, download the scripts from the [COMOKIT-HPC repository](https://github.com/COMOKIT/COMOKIT-HPC) or the direct link [here](https://github.com/COMOKIT/COMOKIT-HPC.git)
+- First, download the scripts from the [COMOKIT-HPC repository](https://github.com/COMOKIT/COMOKIT-HPC) or the direct link to clone the repository [here](https://github.com/COMOKIT/COMOKIT-HPC.git)
+- decompress the downloaded archive
+- open a terminal in your computer
+- move inside the folder
+``$ cd /path-to/COMOKIT-HPC``
