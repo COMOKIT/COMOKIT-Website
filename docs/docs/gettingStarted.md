@@ -42,3 +42,5 @@ If you want to install and run the model yourself on your computer you should
 - open a terminal in your computer
 - move inside the folder
 ``$ cd /path-to/COMOKIT-HPC``
+- run python command to downlad the requirements
+``$ pip install -r requirements.txt``
