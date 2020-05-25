@@ -15,7 +15,7 @@ Short text
 
 ## Version V1.0 of COMOKIT, the COVID-19 Modeling Kit, is now available ! 
 <p align="center">
-  <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/como.png">
+  <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/como.jpg">
 </p>
 
 In the face of the COVID-19 pandemic, public health authorities around the world have experimented, in a short period of time, with various combinations of interventions at different scales. However, as the pandemic continues to progress, there is a growing need for tools and methodologies to quickly analyze the impact of these interventions and answer concrete questions regarding their effectiveness, range and temporality.
