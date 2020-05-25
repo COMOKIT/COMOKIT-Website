@@ -22,7 +22,11 @@ COMOKIT has also been made to explore his model and run in headless mode on serv
 
 ## Introduction
 
-[GAMA Headless mode](https://gama-platform.github.io/wiki/Headless) allows to run GAMA without Graphical interfaces. We developped some scripts allowing this configuration.
+COMOKIT has also be developped to be runned in [headless mode](https://en.wikipedia.org/wiki/Headless_software). To do so, it's using the [GAMA Headless](https://gama-platform.github.io/wiki/Headless) feature which allows to run GAMA on a server without graphical interfaces. 
+
+To simplify this usage, we developped some tools allowing this configuration.
+
+## Getting started
 
 - First, download the scripts from the [COMOKIT-HPC repository](https://github.com/COMOKIT/COMOKIT-HPC) or the direct link to clone the repository [here](https://github.com/COMOKIT/COMOKIT-HPC.git)
 - decompress the downloaded archive
