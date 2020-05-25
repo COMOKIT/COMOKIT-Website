@@ -5,15 +5,9 @@ nav_order: 99
 permalink: /version1
 ---
 
-# Version 1.0
+# Version 1.0 of COMOKIT is now available !
 {: .no_toc }
 
-<!--
-Short text
-{: .fs-6 .fw-300 }
--->
-
-## Version V1.0 of COMOKIT is now available ! 
 <p align="center">
   <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/como.jpg?raw=true">
 </p>
