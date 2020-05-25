@@ -20,31 +20,51 @@ How to run COMOKIT locally
 
 ---
 
-## Download the latest COMOKIT Release
+## Install COMOKIT
 
-The base model represents the diffusion and transmission of COVID-19 at the scale of a commune (approx. 10.000 people in Vietnam) using an agent-based approach: each inhabitant is represented individually with his/her specific characteristics (age, sex, household), clinical state (susceptible, exposed, infected with or w/o symptoms, recovered or dead) and daily activities based on a generated agenda, which can be controlled and limited by an Authority agent whose role is to choose and apply a public health policy consisting of mitigation measures and interventions. Each set of parameters (incl. the policies applied) represents a scenario, which can be explored by running several simulations (to account for the stochasticity of each run) and compared against other scenarios in more elaborate experiments. COMOKIT makes it therefore very easy to assess, measure and compare the impacts of interventions on the spread of the virus. The data required to instantiate this base model on a specific case study is voluntarily limited; in most cases, only a file containing the built environment may be enough to build a simple model. More realistic scenarios will of course require more detailed datasets.
+You can install and run COMOKIT by two way : you can download and run the _All-In-One_ archive, or manually install GAMA and import COMOKIT inside. 
 
-## Install it yourself
+> We do recommend you to pick the first option (especially if you're a beginner).
+
+## Bundled install (easy)
+
+<details>
+	<summary style="display: list-item">View contents</summary>
+
+- First you should [download the All-In-One](https://github.com/COMOKIT/COMOKIT-Model/releases/tag/v1.0) archive for your system (Windows, MacOS or Linux).
+- Unzip it on your computer (the place isn't important, but do know where).
+- Open the extracted folder.
+- Start the GAMA Application.
+
+Here you are, you have an instance of COMOKIT running on your computer.
+
+</details>
+
+### Manual install (harder)
+
+<details>
+	<summary style="display: list-item">View contents</summary>
 
 If you want to install and run the model yourself on your computer you should 
 
 - First, download and extract the [GAMA Continuous Build version](https://github.com/gama-platform/gama/releases/tag/continuous) (if you don't know which version to take, choose the one with JDK). If you need more information about how to install GAMA, check the [installation page](https://gama-platform.github.io/wiki/Installation)
-- Second download the model [on GitHub](https://github.com/COMOKIT/CoVid19) (click [here](https://github.com/COMOKIT/CoVid19/archive/master.zip) to download it automatically)
+- Second download the model [on GitHub](https://github.com/COMOKIT/COMOKIT-Model) (click [here](https://github.com/COMOKIT/COMOKIT-Model/archive/master.zip) to download it automatically)
 - Extract that ZIP file somewhere on your computer and [import it on GAMA](https://gama-platform.github.io/wiki/ImportingModels) as a GAMA project.
-<img src='https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_menu_file_import.png' alt='Import a Gama project' width='600'/>
-<br>
-<img src='https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_dialog_import_projects.png' alt='Import a Gama project from a folder' width='600'/>
+
+![Import a Gama project](https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_menu_file_import.png)
+
+![Import a Gama project from a folder](https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_dialog_import_projects.png)
+
+</details>
 
 ## How to run
 
-- Select an experiment to run. Bellow we selected the *Realistic Lockdown Durations.gaml* experiment.
+- Launch your installed GAMA application
+- Select an experiment to run. Bellow we selected the *COMOKIT/Experiments/Lockdown/Realistic Lockdown Durations.gaml* experiment.
 
-<p align="center">
-  <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/Gama-launching-experiment.png?raw=true">
-</p>
+![Realistic Lockdown Durations.gaml](https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/Gama-launching-experiment.png?raw=true)
 
 - Click on the *Early containment* green button to run this experiment.
 - Select which city to run the experiment on.
-<p align="center">
-  <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/Gama-launching-experiment-validation.png?raw=true">
-</p>
+
+![Pick dataset](assets/images/Gama-launching-experiment-validation.png?raw=true)
