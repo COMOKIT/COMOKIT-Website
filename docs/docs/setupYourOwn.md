@@ -28,6 +28,8 @@ You'll need to have a GAMA with COMOKIT installed and running. If you don't know
 
 The model requires a minimal dataset that should be, at least, composed of:
 
+> You can find examples of these datasets in the default datasets included in COMOKIT (COMOKIT/Datasets) or [online here](https://github.com/COMOKIT/COMOKIT-Model/tree/master/COMOKIT/Datasets)
+
 - Demographic data : 
 
   - A **population.csv** file that contains individual including some basic attributes, i.e. age, gender and household Identifier 
