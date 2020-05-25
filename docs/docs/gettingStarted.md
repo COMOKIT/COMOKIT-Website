@@ -37,8 +37,14 @@ If you want to install and run the model yourself on your computer you should
 
 ## How to run
 
-- select an experiment to run. Bellow we selected the *Realistic Lockdown Durations.gaml* experiment.
+- Select an experiment to run. Bellow we selected the *Realistic Lockdown Durations.gaml* experiment.
 
 <p align="center">
   <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/Gama-launching-experiment.png?raw=true">
+</p>
+
+- Click on the *Early containment* green button to run this experiment.
+- Select which city to run the experiment on.
+<p align="center">
+  <img  src="https://github.com/COMOKIT/COMOKIT-Website/blob/master/docs/assets/images/Gama-launching-experiment-validation.png?raw=true">
 </p>
