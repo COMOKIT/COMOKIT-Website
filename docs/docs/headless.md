@@ -28,7 +28,7 @@ To simplify this usage, we developped some tools allowing this configuration.
 
 ## Getting started
 
-## Before installation
+### Before installation
 
 Before installing COMOKIT, be sure to have on your server :
 
