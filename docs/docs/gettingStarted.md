@@ -34,3 +34,6 @@ If you want to install and run the model yourself on your computer you should
 - Enjoy our model running on your computer
 
 ### Install for Headless mode (command line and HPC use) ###
+
+[Headless mode](https://gama-platform.github.io/wiki/Headless) allows to run GAMA without Graphical interfaces. We developped some scripts allowing this configuration.
+- 
