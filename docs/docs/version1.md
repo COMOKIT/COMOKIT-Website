@@ -32,5 +32,5 @@ Relying on sub-models that have been extensively tested, spatial and social data
 
 An [all-in-one distribution of **COMOKIT** V1.0](https://github.com/COMOKIT/COMOKIT-Model/releases/tag/v1.0) (comprising a Java Virtual Machine, GAMA 1.8 and **COMOKIT** itself), together with a [comprehensive set of guidelines and documentation](https://comokit.org/docs/), allows first-time users of GAMA to quickly experiment with the model and build their own extensions or applications in a matter of minutes. Advanced GAMA users can download and import the model from its [GitHub repository](https://github.com/COMOKIT/COMOKIT-Model). Additional datasets are available in a [separate repository](https://github.com/COMOKIT/COMOKIT-Datasets).
 
-We'd love to hear from you ! Enquiries, requests but also information on the models you are developing with **COMOKIT** can be sent to mailto:contact@comokit.org. Finally, issues you might have with the model can be reported [here](https://github.com/COMOKIT/COMOKIT-Model/issues). 
+We'd love to hear from you ! Enquiries, requests but also information on the models you are developing with **COMOKIT** can be sent to [contact@comokit.org](mailto:contact@comokit.org). Finally, issues you might have with the model can be reported [here](https://github.com/COMOKIT/COMOKIT-Model/issues). 
   
