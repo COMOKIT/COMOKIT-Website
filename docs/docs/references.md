@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Scientific References
-nav_order: 999
+nav_order: 50
 permalink: /references
 ---
 
