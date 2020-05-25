@@ -28,9 +28,6 @@ You can install and run COMOKIT by two way : you can download and run the _All-I
 
 ## Bundled install (easy)
 
-<details>
-	<summary style="display: list-item">View contents</summary>
-
 - First you should [download the All-In-One](https://github.com/COMOKIT/COMOKIT-Model/releases/tag/v1.0) archive for your system (Windows, MacOS or Linux).
 - Unzip it on your computer (the place isn't important, but do know where).
 - Open the extracted folder.
@@ -38,12 +35,7 @@ You can install and run COMOKIT by two way : you can download and run the _All-I
 
 Here you are, you have an instance of COMOKIT running on your computer.
 
-</details>
-
 ### Manual install (harder)
-
-<details>
-	<summary style="display: list-item">View contents</summary>
 
 If you want to install and run the model yourself on your computer you should 
 
@@ -54,8 +46,6 @@ If you want to install and run the model yourself on your computer you should
 ![Import a Gama project](https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_menu_file_import.png)
 
 ![Import a Gama project from a folder](https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_dialog_import_projects.png)
-
-</details>
 
 ## How to run
 
