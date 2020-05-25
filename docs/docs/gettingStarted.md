@@ -34,4 +34,8 @@ If you want to install and run the model yourself on your computer you should
 <img src='https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_menu_file_import.png' alt='Import a Gama project' width='600'/>
 <br>
 <img src='https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_dialog_import_projects.png' alt='Import a Gama project from a folder' width='600'/>
-- Enjoy our model running on your computer
+
+## How to run
+
+- select an experiment to run. Bellow we selected the *Realistic Lockdown Durations.gaml* experiment.
+
