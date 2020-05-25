@@ -28,13 +28,48 @@ To simplify this usage, we developped some tools allowing this configuration.
 
 ## Getting started
 
-- First, download the scripts from the [COMOKIT-HPC repository](https://github.com/COMOKIT/COMOKIT-HPC) or the direct link to clone the repository [here](https://github.com/COMOKIT/COMOKIT-HPC.git)
-- decompress the downloaded archive
-- open a terminal in your computer
-- move inside the folder
-``$ cd /path-to/COMOKIT-HPC``
-- run python command to downlad the requirements
-``$ pip install -r requirements.txt``
+## Before installation
+
+Before installing COMOKIT, be sure to have on your server :
+
+- 64 bits server
+```
+$ lscpu | head -n 2
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+```
+- Python 3
+```
+$ python3 -V
+Python 3.8.2
+```
+- pip3
+```
+$ pip3 -V
+pip 20.1.1 from /home/roiarthurb/.local/lib/python3.8/site-packages/pip (python 3.8)
+```
+- (if you don't use GAMA with JDK) JDK 8
+```
+$ java -version
+openjdk version "1.8.0_242"
+OpenJDK Runtime Environment (build 1.8.0_242-b08)
+OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
+```
+
+### Installation
+
+To install COMOKIT Headless on your server you can either [download a COMOKIT release](https://github.com/COMOKIT/COMOKIT-Model/releases/) and the [headless tools](https://github.com/COMOKIT/COMOKIT-HPC) or directly download the [HPC archive](https://github.com/COMOKIT/COMOKIT-HPC/releases/) (which package GAMA with an embedeed JDK, COMOKIT for Linux and the needed tools).
+
+> If you don't use a version of GAMA provided with one of our release, be sure to use [GAMA Continuous](https://github.com/gama-platform/gama/releases/tag/continuous) and a [JAVA Developpement Kit (JDK) 8](https://en.wikipedia.org/wiki/Java_version_history#Java_SE_8)
+
+### Setting up your server
+
+  
+To have your tooly-scripts ready to run, be sure to install all the required python's modules like so
+
+```
+$ pip3 install -r /path/to/COMOKIT-HPC/pre-processing/required.txt
+```
 
 ## How to use:
 
