@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Models used in COMOKIT
-nav_order: 5
+nav_order: 10
 permalink: /modelsUsed
 ---
 
