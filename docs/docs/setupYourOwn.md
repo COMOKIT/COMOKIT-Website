@@ -34,16 +34,21 @@ COMOKIT provides a defaut template (i.e. not functional _per se_) project that d
 The first step is to duplicate (and rename) this template project so that it becomes a new project in the `User models` section of the workspace. 
 
 Locate it first (either in the `Library models` or in the `User models` depending on your installation of COMOKIT):
+
 ![Locate](assets/images/Template1.png)
 
 Copy the whole project:
+
 ![Copy](assets/images/Template2.png)
 
 Paste it into `User models`:
+
 ![Paste](assets/images/Template3.png)
 
 Verify it is correctly placed: 
+
 ![Verify](assets/images/Template4.png)
+
 
 ## Create a new case study
 
