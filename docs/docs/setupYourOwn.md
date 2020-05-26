@@ -26,7 +26,16 @@ You need to have a GAMA with COMOKIT installed and running. If it not yet the ca
 
 ## Duplicate the `COMOKIT Template Project` in your workspace
 
-This template (i.e. not functional _per se_) project defines a basic layout for a COMOKIT project. 
+This template (i.e. not functional _per se_) project defines a basic layout for a COMOKIT project and provides templates to build new experiments. When defining a new case study, the easiest way to proceed is to duplicate it into the `User models` section of the workspace. 
+
+Locate it first (either in the `Library models` or in the `User models` depending on your installation of COMOKIT):
+![Locate](assets/images/Template1.png)
+Copy the whole project:
+![Copy](assets/images/Template2.png)
+Paste it into `User models`:
+![Paste](assets/images/Template3.png)
+Verify it is correctly placed: 
+![Verify](assets/images/Template4.png)
 
 ## Create a new case study
 
