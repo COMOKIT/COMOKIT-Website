@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Headless
+title: Headless execution
 nav_order: 5
 description: "How to use COMOKIT in headless mode on HPC."
 permalink: /headless
 ---
 
-# Headless
+# Headless execution
 {: .no_toc }
 
 COMOKIT has also been made to explore his model and run in headless mode on server or [HPC](https://en.wikipedia.org/wiki/High-performance_computing).
