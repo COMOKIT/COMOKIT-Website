@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Parameterize
+title: Parameterizing simulations
 nav_order: 3
 description: "Setting up your COMOKIT Model"
 permalink: /parameterize
 ---
 
-# Setting Up
+# Parameterizing simulations 
 {: .no_toc }
 
 <!--
