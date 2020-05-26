@@ -85,10 +85,6 @@ For the external synthetic population generator, we choose to use the Gen* gener
 
 Each agent of the model has its own set of timely organized activities, i.e. a synthetic agenda. The generation of agendas is based on demographic attributes of the agent, such as sex, age and employment status, and the specification of workdays and days off during the week.
 
-### Epidemiological parameters
-
-The epidemiological parameter file is a table of parameters. For each of them, the following values are provided: (i) the name of the parameter, (ii) the age category lower bound (the upper bound will be defined according to the lower bound of the next age category of the parameter), (iii) whether the parameter value is given or if it has to be picked in a given probability distribution, (iv) its value (if of type given value) or the first parameter for the distribution, and (v) the second parameter (of the distribution).
-
 ## Submodels
 
 ### Daily Activities
