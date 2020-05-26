@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Extending COMOKIT
+title: Applying COMOKIT
 nav_order: 4
 permalink: /setupYourOwn
 ---
 
-# Extending COMOKIT
+# Applying COMOKIT
 {: .no_toc }
 
 
@@ -23,7 +23,7 @@ How to apply COMOKIT to your own dataset
 ## Introduction
 
 This section describes the simplest way to use COMOKIT to explore the impact of control policies in a given case study (a case study defined by its geographical location and boundaries, possibly GIS data on the built environment, and possibly population data). 
-GAMA (with COMOKIT) must of course be already installed and running. If it not the case, please refer to the [previous documentation page](gettingStarted)
+GAMA (with COMOKIT) must of course be already installed and running. If it is not the case, please refer to the [Getting Started documentation page](gettingStarted)
 
 ## Duplicate the `COMOKIT Template Project` in your workspace
 
