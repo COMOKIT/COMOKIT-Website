@@ -51,3 +51,15 @@ The synthetic population of agents comprises three dimensions of agent attribute
 > We choose to use the Gen* generator (that can also be coupled with the [GAMA platform](https://github.com/ANRGenstar/genstar.gamaplugin))
 >Chapuis, K., Taillandier, P., Renaud, M., & Drogoul, A. (2018). Gen*: a generic toolkit to generate spatially explicit synthetic >populations. International Journal of Geographical Information Science, 32(6), 1194-1210.
 
+### Synthetic agenda
+Each agent of the model has its own set of timely organized activities, i.e. a synthetic agenda. The generation of agendas is based on demographic attributes of the agent, such as sex, age and employment status, and the specification of workdays and days off during the week.
+
+### Epidemiological parameters
+The epidemiological parameter file is a table of parameters. For each of them, the following values are provided: (i) the name of the parameter, (ii) the age category lower bound (the upper bound will be defined according to the lower bound of the next age category of the parameter), (iii) whether the parameter value is given or if it has to be picked in a given probability distribution, (iv) its value (if of type given value) or the first parameter for the distribution, and (v) the second parameter (of the distribution).
+
+## Submodels
+### Daily Activities
+Once weekly and daily agendas have been created at initialization, `Individual` agents have only to get, at each simulation step, the `Activity` corresponding to the current day and current hour, asks the `Authority` agent’s authorization to perform it, finds a `building` associated with the `Activity`, and moves in it. In addition, the agent will ask the `Authority` for the number of individuals it can perform the `Activity` with. 
+
+### Institutions
+The `Authority` agent is in charge of applying one or several mitigation policies on the whole case study or on some local spaces. The policies can impact the simulation in two ways. Every step, the `Authority` can proactively perform some actions encoded in the policy, e.g. conduct a given number of tests on the population. On the other hand, each `Individual` agent asks the `Authority` whether it is allowed to execute a given `Activity`. In this case, the `Authority` will make its choice based on what is allowed by its policies that are currently applied.
