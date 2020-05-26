@@ -79,8 +79,13 @@ The parameters of the different sub-models can all be specified, either in the G
 In the new project created after the template, choose to create a new model file. GAMA will detect the templates present in your project and propose to use one of them as the basis of the new experiment. 
 
 Create a new model file (not -- yet -- a new experiment file: model files are more flexible):
+
 ![Copy](assets/images/Template5.png)
+
 Several templates (corresponding to the ones present in (`Your Project/templates`) are proposed in addition to the basic ones:
+
 ![Paste](assets/images/Template6.png)
+
 The new model is automatically placed in the `models` subfolder. If the dataset is correctly created and located, the experiment it defines can be run immediately.
+
 ![Verify](assets/images/Template7.png)
