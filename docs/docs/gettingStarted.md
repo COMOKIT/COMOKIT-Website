@@ -45,7 +45,7 @@ If you want to install and run the model yourself on your computer you should:
 
 - First, download and extract the [GAMA Continuous Build version](https://github.com/gama-platform/gama/releases/tag/continuous) (if you do not know which version to take, choose the one with JDK). If you need more information about how to install GAMA, check the [installation page](https://gama-platform.github.io/wiki/Installation)
 - Second, download the model [on GitHub](https://github.com/COMOKIT/COMOKIT-Model) (click [here](https://github.com/COMOKIT/COMOKIT-Model/archive/master.zip) to download it automatically)
-- Extract that ZIP file somewhere on your computer and [import it on GAMA](https://gama-platform.github.io/wiki/ImportingModels) as a GAMA project.
+- Extract that ZIP file somewhere on your computer and [import it on GAMA](https://gama-platform.github.io/wiki/ImportingModels) as a GAMA project (see pictures below).
 
 ![Import a Gama project](https://gama-platform.github.io/resources/images/workspaceProjectsAndModels/import_menu_file_import.png)
 
