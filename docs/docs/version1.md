@@ -29,3 +29,4 @@ An [all-in-one distribution of **COMOKIT** V1.0](https://github.com/COMOKIT/COMO
 
 We'd love to hear from you ! Enquiries, requests but also information on the models you are developing with **COMOKIT** can be sent to [contact@comokit.org](mailto:contact@comokit.org). Finally, issues you might have with the model can be reported [here](https://github.com/COMOKIT/COMOKIT-Model/issues). 
   
+[Download COMOKIT V1.0](https://github.com/COMOKIT/COMOKIT-Model/releases/tag/v1.0){: .btn .text-center }
