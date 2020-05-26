@@ -24,11 +24,11 @@ Text header
 
 ## Epidemiology
 
-## Synthetic population
+## Synthetic population generation
 
 As mentioned in its [ODD description](ODD), COMOKIT proposes two ways to generate a synthetic population of agents: either from a csv file where each line corresponds to an individual or using a built-in generator. This paragraph details how both can be parameterized. The following sub-section shows how to customize the [built-in generator](#Built-in-generator-parametrization) and how to harmonize [file based synthetic records](#File-based-data-harmonization)
 
-### Built-in generator parametrization
+### Built-in generator parameterization
 
 The default generator provided with COMOKIT makes use of a configuration file in order to define key variables of the algorithm. In order to define them according to a case study, it should be created and placed in the case study folder, and  named `Population parameter.csv`, with a first column corresponding to the parameter name and a second column the provided value. The list below details all the parameters that can be defined in this file with their default value when they are omitted:
 
@@ -62,7 +62,7 @@ In order to use microdata to initialize the synthetic population of agents in CO
 
 Each one has a built-in method to get a default value when data is missing or missencoding. The age will be uniformly drawn in ``[0,max_age]`` (with ``max_age`` being a variable of COMOKIT that can be found in ``Parameters.gaml``), Gender chosen according to a probability of 0.512 (ratio of 105 males for 100 females) and an unemployed rate of 0.03 (i.e. same rate as in the built-in generator). When no household identifier is provided in the micro-data, COMOKIT builds households like the built-in generator does, except it selects relevant individuals from the sample rather than creating them.
 
-## Synthetical agenda
+## Synthetic agenda
 
 ## Activities
 
