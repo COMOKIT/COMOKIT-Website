@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Setting up your own
+title: Extending COMOKIT
 nav_order: 4
 permalink: /setupYourOwn
 ---
 
-# Setting up your own simulation
+# Extending COMOKIT
 {: .no_toc }
 
 
-How to setup COMOKIT with your own data
+How to apply COMOKIT to your own dataset
 {: .fs-6 .fw-300 }
 
 ## Table of contents
