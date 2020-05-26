@@ -90,16 +90,36 @@ optional arguments:
                         Number of replication for each paramater space (default: 1)
   -s INT, --split INT   Split XML file every S replications (default: 1)
   -o STR, --output STR  Path to folder where save output CSV (default: "../../batch_output")
-  -u STR, --until STR   Stop condition for the simulations (default: "world.sim_stop()"
+  -u STR, --until STR   Stop condition for the simulations (default: "world.sim_stop()")
   -S INT, --seed INT    Starting value for seeding simulation (default: 0)
   -f INT, --final INT   Final step for simulations
   -xml <experiment name> /path/to/file.gaml /path/to/file.xml
                         Classical xml arguments
 ```
 
-**Testing Example**
+### Example usage
+
+COMOKIT provide you an XML example to launch the headless.
+
+[SCREENSHOT]
+
+It has been generated with the command below
+
 ```
-$ python3 generateMultipleXML.py -xml "Headless" ~/COMOKIT-Model/COMOKIT/Experiments/Physical\ Interventions/Significance\ of\ Wearing\ Masks.gaml /tmp/headless/mask.xml -o ~/COMOKIT-HPC/results/ -f 2
+$ cd /path/to/COMOKIT-Model/COMOKIT/Utilities
+
+$ python3 ~/Documents/COMOKIT/HPC/pre-processing/generateMultipleXML.py -xml "SensitivityHeadless" ../Experiments/Sensitivity\ Analysis/Sensitivity\ Analysis.gaml  ./testHeadless.xml -f 20 
+Total number of parameters detected : 0
+Total number of possible combinaison : 1
+	Replications : 1
+	Number of exp in file : -1
+	Final step : 20
+=== Start generating XML file :
+(every dot will be a simulation with all the replications created)
+.
+=== Start saving XML file
+
+=== Done ;)
 ```
 **Running Example**
 ```
