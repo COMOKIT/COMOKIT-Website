@@ -3,6 +3,7 @@ layout: default
 title: Version 1.0
 nav_order: 99
 permalink: /version1
+search_exclude: true
 ---
 
 # Version 1.0 of COMOKIT is now available !
