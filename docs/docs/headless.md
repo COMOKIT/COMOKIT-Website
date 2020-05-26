@@ -33,23 +33,23 @@ To simplify this usage, we developped some tools allowing this configuration.
 Before installing COMOKIT, be sure to have on your server:
 
 - 64 bits server
-```
+```bash
 $ lscpu | head -n 2
 Architecture:                    x86_64
 CPU op-mode(s):                  32-bit, 64-bit
 ```
 - Python 3
-```
+```bash
 $ python3 -V
 Python 3.8.2
 ```
 - pip3
-```
+```bash
 $ pip3 -V
 pip 20.1.1 from /home/roiarthurb/.local/lib/python3.8/site-packages/pip (python 3.8)
 ```
 - (if you do not use GAMA with JDK) JDK 8
-```
+```bash
 $ java -version
 openjdk version "1.8.0_242"
 OpenJDK Runtime Environment (build 1.8.0_242-b08)
@@ -80,7 +80,7 @@ GAMA Headless mode needs an XML configuration file in order to run GAMA. The HPC
 - move to the folder pre-processing ``$ cd /path-to/COMOKIT-HPC/pre-processing``
 - run `generateMultipleXML.py` with arguments to create the XML file and run GAMA. Basic usage is described below.
 
-```
+```bash
 $ python3 generateMultipleXML.py -h
 usage: $ python3 generateMultipleXML.py [options] -f INT -xml <experiment name> /path/to/file.gaml /path/to/file.xml
 
@@ -105,10 +105,10 @@ COMOKIT provide you an XML example to launch the headless.
 
 It has been generated with the command below
 
-```
+```bash
 $ cd /path/to/COMOKIT-Model/COMOKIT/Utilities
 
-$ python3 ~/Documents/COMOKIT/HPC/pre-processing/generateMultipleXML.py -xml "SensitivityHeadless" ../Experiments/Sensitivity\ Analysis/Sensitivity\ Analysis.gaml  ./testHeadless.xml -f 20 
+$ python3 ~/path/to/COMOKIT-HPC/pre-processing/generateMultipleXML.py -xml "SensitivityHeadless" ../Experiments/Sensitivity\ Analysis/Sensitivity\ Analysis.gaml  ./testHeadless.xml -f 20 
 Total number of parameters detected : 0
 Total number of possible combinaison : 1
 	Replications : 1
@@ -121,9 +121,23 @@ Total number of possible combinaison : 1
 
 === Done ;)
 ```
-**Running Example**
-```
-$ python3 generateMultipleXML.py -xml "Headless" ~/COMOKIT-Model/COMOKIT/Experiments/Physical\ Interventions/Significance\ of\ Wearing\ Masks.gaml /tmp/headless/mask.xml -o ~/COMOKIT-HPC/results/ -r 1000 -s 36 -f 5000
+
+In the command above, we said that we want to generate an XML file with the experiment _SensitivityHeadless_ from the file _Experiments/Sensitivity Analysis/Sensitivity Analysis.gaml_ and save it at _./testHeadless.xml_. We also precised that the simulation should stop after 20 steps (if not stopped before).
+
+This command is the smallest command possible, but we can go way deeper in the customization as we will see after.
+
+The generated XML looks like this :
+
+```xml
+<Experiment_plan>
+	<Simulation experiment="SensitivityHeadless" finalStep="20" id="0" seed="0" sourcePath="../Experiments/Sensitivity Analysis/Sensitivity Analysis.gaml" until="world.sim_stop()">
+		<Parameters>
+			<Parameter type="INT" value="0" var="idSimulation"/>
+			<Parameter type="STRING" value="../batch_output/" var="result_folder"/>
+		</Parameters>
+		<Outputs/>
+	</Simulation>
+</Experiment_plan>
 ```
 
 ### Run GAMA Headless
