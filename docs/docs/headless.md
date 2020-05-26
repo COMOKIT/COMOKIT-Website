@@ -103,3 +103,15 @@ $ python3 generateMultipleXML.py -xml "Headless" ~/COMOKIT-Model/COMOKIT/Experim
 ```
 $ python3 generateMultipleXML.py -xml "Headless" ~/COMOKIT-Model/COMOKIT/Experiments/Physical\ Interventions/Significance\ of\ Wearing\ Masks.gaml /tmp/headless/mask.xml -o ~/COMOKIT-HPC/results/ -r 1000 -s 36 -f 5000
 ```
+
+### Run GAMA Headless
+First you need to export $GAMA_CLASSPATH environment variable.
+```
+$ export $GAMA_CLASSPATH=/path/to/GAMA/application
+```
+
+Then, run the command line as the example bellow. More details in the [GAMA documentation](https://gama-platform.github.io/wiki/Headless#command).
+```
+
+$ bash gama-headless.sh /tmp/headless/mask.xml outputHeadLessFolder
+```
