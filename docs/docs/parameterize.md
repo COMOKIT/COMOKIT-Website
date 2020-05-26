@@ -65,7 +65,10 @@ Each one has a built-in method to get a default value when data is missing or mi
 ## Synthetic agenda
 
 
-The synthetic agenda generator provided with COMOKIT makes use of a configuration file in order to define key variables of the algorithm. In order to define them according to a case study, it should be created and placed in the case study folder, and  named `Agenda parameter.csv`, with a first column corresponding to the parameter name and a second column the provided value. The list below details all the parameters that can be defined in this file with their default value when they are omitted:
+The synthetic agenda generator provided with COMOKIT makes use of two files: a configuration file and an activity file.
+
+### Synthetic agenda configuration file
+The configuration file is used to define the key variables of the algorithm. In order to define them according to a case study, it should be created and placed in the case study folder, and  named `Agenda parameter.csv`, with a first column corresponding to the parameter name and a second column the provided value. The list below details all the parameters that can be defined in this file with their default value when they are omitted:
 
  
  - ``non_working_days`` : List of non working days (1: Monday, 7: Sunday). Default is ``[7]``
@@ -98,7 +101,20 @@ The synthetic agenda generator provided with COMOKIT makes use of a configuratio
 
 
 
-## Activities
+### Activity file
+The activity file is used to define, according to the Individual’s age and the sex category, the weights of the different types of activity (the higher the weight, the higher the chance to carried out this activity).
+In order to define it according to a case study, it should be created and placed in the case study folder, and named `Activity type weights.csv`.The table below shows an example of file
+
+| Age min | Age max | sex | visiting neighbor | visiting friend | eating | shopping | leisure | outside activity | sport | other activity |
+|---------|---------|-----|-------------------|-----------------|--------|----------|---------|------------------|-------|----------------|
+| 0       | 10      | 0   | 1.0               | 1.0             | 0.5    | 0.5      | 1.0     | 2.0              | 1.0   | 0.1            |
+| 0       | 10      | 1   | 1.0               | 1.0             | 0.5    | 0.5      | 1.0     | 2.0              | 1.0   | 0.1            |
+| 11      | 18      | 0   | 0.2               | 0.5             | 1.0    | 0.5      | 2.0     | 2.0              | 1.0   | 0.1            |
+| 11      | 18      | 1   | 0.2               | 0.5             | 1.0    | 0.5      | 2.0     | 2.0              | 1.0   | 0.1            |
+| 19      | 60      | 0   | 1.0               | 1.0             | 1.0    | 1.0      | 2.0     | 1.0              | 1.0   | 1.0            |
+| 19      | 60      | 1   | 1.0               | 1.0             | 1.0    | 2.0      | 2.0     | 1.0              | 1.0   | 1.0            |
+| 61      | 120     | 0   | 2.0               | 2.0             | 0.5    | 1.0      | 0.5     | 0.5              | 0.2   | 2.0            |
+| 61      | 120     | 1   | 2.0               | 2.0             | 0.5    | 2.0      | 0.5     | 0.5              | 0.1   | 2.0            |
 
 ## Redefining parameter values
 
