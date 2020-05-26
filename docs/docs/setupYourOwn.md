@@ -20,13 +20,18 @@ How to apply COMOKIT to your own dataset
 
 ---
 
-## Requirements
+## Introduction
 
-You need to have a GAMA with COMOKIT installed and running. If it not yet the case, please refer to the [previous documentation page](gettingStarted)
+This section describes the simplest way to use COMOKIT to explore the impact of control policies in a given case study (a case study defined by its geographical location and boundaries, possibly GIS data on the built environment, and possibly population data). 
+GAMA (with COMOKIT) must of course be already installed and running. If it not the case, please refer to the [previous documentation page](gettingStarted)
 
 ## Duplicate the `COMOKIT Template Project` in your workspace
 
-This template (i.e. not functional _per se_) project defines a basic layout for a COMOKIT project and provides templates to build new experiments. When defining a new case study, the easiest way to proceed is to duplicate it into the `User models` section of the workspace. 
+When defining a new case study, the easiest way to proceed is to create a new project, which contains the specific model files (extensions of the base model, new experiments, etc.), the datasets containing the different input data of the case study and other assets related to the case study.
+
+COMOKIT provides a defaut template (i.e. not functional _per se_) project that defines the basic layout of a COMOKIT project and provides templates to build new experiments. 
+
+The first step is to duplicate (and rename) this template project so that it becomes a new project in the `User models` section of the workspace. 
 
 Locate it first (either in the `Library models` or in the `User models` depending on your installation of COMOKIT):
 ![Locate](assets/images/Template1.png)
