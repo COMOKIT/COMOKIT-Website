@@ -26,7 +26,7 @@ Text header
 
 ## Synthetic population generation
 
-As mentioned in its [ODD description](ODD), COMOKIT proposes two ways to generate a synthetic population of agents: either from a csv file where each line corresponds to an individual or using a built-in generator. This paragraph details how both can be parameterized. The following sub-section shows how to customize the [built-in generator](#Built-in-generator-parametrization) and how to harmonize [file based synthetic records](#File-based-data-harmonization)
+As mentioned in its [ODD description](https://comokit.org/ressources/ODD-COMOKIT_v1.pdf), COMOKIT proposes two ways to generate a synthetic population of agents: either from a csv file where each line corresponds to an individual or using a built-in generator. This paragraph details how both can be parameterized. The following sub-section shows how to customize the [built-in generator](#Built-in-generator-parametrization) and how to harmonize [file based synthetic records](#File-based-data-harmonization)
 
 ### Built-in generator parameterization
 
