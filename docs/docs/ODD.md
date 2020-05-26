@@ -87,6 +87,12 @@ Each agent of the model has its own set of timely organized activities, i.e. a s
 
 ## Submodels
 
+### Epidemiological submodel
+
+The epidemiological model is based on the SEIR model with an infectious state that can be presymptomatic, symptomatic or asymptomatic. Once the infectious period is over, `Individual` agents reach the Removed (R) state, representing the fact that the `Individual` has been infected, but is not infectious anymore. To represent deaths and recoveries, we decided to consider  the current clinical status of the Individual agent: when it becomes symptomatic, an `Individual` will first need hospitalisation, and then (with a given probability) ICU. If the Individual agent is not being taken to a hospital before the end of its expected period needing ICU, it will be considered as dead due to lack of treatment. In the case, it went to ICU when needed, it has a probability to recover. 
+
+The various (incubation...) periods and probabilities are `Individual`dependent and are randomly picked following various distributions.
+
 ### Daily Activities
 
 Once weekly and daily agendas have been created at initialization, `Individual` agents have only to get, at each simulation step, the `Activity` corresponding to the current day and current hour, asks the `Authority` agent’s authorization to perform it, finds a `building` associated with the `Activity`, and moves in it. In addition, the agent will ask the `Authority` for the number of individuals it can perform the `Activity` with. 
