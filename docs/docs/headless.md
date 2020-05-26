@@ -140,6 +140,43 @@ The generated XML looks like this :
 </Experiment_plan>
 ```
 
+### Advanced usage
+
+As you can see, our previous command only generated an `Experiment Plan` with a single `Simulation`. This example is the simpliest usage to give you a try runnable on your computer, but it doesn't fit if you want to do a full exploration on a server. 
+
+To do so you can change the script parameters to generate a bigger exploration plan like this :
+
+```bash
+$ python3 ~/path/to/COMOKIT-HPC/pre-processing/generateMultipleXML.py -xml "SensitivityHeadless" ../Experiments/Sensitivity\ Analysis/Sensitivity\ Analysis.gaml  ./testHeadless.xml -o ~/COMOKIT-HPC/results/ -r 1000 -s 36 -f 5000
+Total number of parameters detected : 0
+Total number of possible combinaison : 1
+	Replications : 1000
+	Number of exp in file : 36
+	Final step : 5000
+=== Start generating XML file :
+(every dot will be a simulation with all the replications created)
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+=== Start saving XML file
+
+=== Done ;)
+
+$ # Check generated XML files
+$ ls -l *.xml | wc -l
+29
+$ ls -lh *.xml | head  
+-rw-r--r--  1 roiarthurb roiarthurb  15K 26 mai   10:31 testHeadless-0.xml
+-rw-r--r--  1 roiarthurb roiarthurb  16K 26 mai   10:31 testHeadless-10.xml
+-rw-r--r--  1 roiarthurb roiarthurb  16K 26 mai   10:31 testHeadless-11.xml
+-rw-r--r--  1 roiarthurb roiarthurb  16K 26 mai   10:31 testHeadless-12.xml
+-rw-r--r--  1 roiarthurb roiarthurb  16K 26 mai   10:31 testHeadless-13.xml
+-rw-r--r--  1 roiarthurb roiarthurb  16K 26 mai   10:31 testHeadless-14.xml
+-rw-r--r--  1 roiarthurb roiarthurb  16K 26 mai   10:31 testHeadless-15.xml
+```
+
+So, with this advances command we created an `Experiment Plan` with 1000 simulations (1 combinaison times 1000 replications, done with the argument `-r`) splited in several files so every file contain 36 `Simulation` (`-s`).
+
+> Note that if you split your XML file, it will automatically change the name to have a unique id on every file.
+
 ### Run GAMA Headless
 First you need to export $GAMA_CLASSPATH environment variable.
 ```
