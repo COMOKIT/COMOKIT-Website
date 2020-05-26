@@ -62,3 +62,7 @@ If you want to install and run the model yourself on your computer you should:
 - Select which city to run the experiment on.
 
 ![Pick dataset](assets/images/Gama-launching-experiment-validation.png?raw=true)
+
+- GAMA will take a few seconds (depending on your computer power) to create the various simulations and displays. You should finally observe the following picture and the simulations run automatically.
+
+![Pick dataset](assets/images/Gama-COMOKIT-lockdown-experiment-launched.png?raw=true)
