@@ -20,13 +20,18 @@ How to apply COMOKIT to your own dataset
 
 ---
 
-## Requirements
+## Introduction
 
-You need to have a GAMA with COMOKIT installed and running. If it not yet the case, please refer to the [previous documentation page](gettingStarted)
+This section describes the simplest way to use COMOKIT to explore the impact of control policies in a given case study (a case study defined by its geographical location and boundaries, possibly GIS data on the built environment, and possibly population data). 
+GAMA (with COMOKIT) must of course be already installed and running. If it not the case, please refer to the [previous documentation page](gettingStarted)
 
 ## Duplicate the `COMOKIT Template Project` in your workspace
 
-This template (i.e. not functional _per se_) project defines a basic layout for a COMOKIT project and provides templates to build new experiments. When defining a new case study, the easiest way to proceed is to duplicate it into the `User models` section of the workspace. 
+When defining a new case study, the easiest way to proceed is to create a new project, which contains the specific model files (extensions of the base model, new experiments, etc.), the datasets containing the different input data of the case study and other assets related to the case study.
+
+COMOKIT provides a defaut template (i.e. not functional _per se_) project that defines the basic layout of a COMOKIT project and provides templates to build new experiments. 
+
+The first step is to duplicate (and rename) this template project so that it becomes a new project in the `User models` section of the workspace. 
 
 Locate it first (either in the `Library models` or in the `User models` depending on your installation of COMOKIT):
 ![Locate](assets/images/Template1.png)
@@ -43,7 +48,7 @@ In order to declare or apply an experiment to a new case study, COMOKIT requires
 
 - Spatial data:
 
-  - **boundary.shp** *[Required]*  : this file should contain the boundary of the case study. _It is the only file absolutely required_ to define a new case study. 
+  - **boundary.shp** *[Required]*  : this file should contain the boundary of the case study. _It is the only file absolutely required_ to define a new case study. More information about shapefiles and repositories are available [here](https://wiki.openstreetmap.org/wiki/Shapefiles). Videos showing how to download Shapefiles for a particular area are also available [here](https://www.youtube.com/watch?v=JN_65VXdgmA) and [here](https://www.youtube.com/watch?v=18cj3VKg9gM). 
   
   - **buildings.shp** *[Optional]* : this file should contain the buildings of the case study. Buildings are in COMOKIT the places where peoples' activities are held. The shapefile attributes table should contain a column named `type` containing the type of the building according to the [OSM specifications](https://wiki.openstreetmap.org/wiki/Map_Features#Building). If buildings are not available for the case study, COMOKIT proposes a model (in `COMOKIT/Utilities/Generate GIS Data.gaml`) that requests OSM servers with respect to the area defined in `boundary.shp` and attempts to build the `buildings.shp` file automatically. This short video will guide you through this process: 
 
