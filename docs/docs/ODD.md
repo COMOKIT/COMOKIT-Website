@@ -35,3 +35,14 @@ A simulation step starts by the Individual agents behave checking whether they a
 
 ## Design Concepts
 ### Basic principles
+As far as the epidemiological dynamics is concerned, we rely on a SEIR model with an infectious state that can be presymptomatic, symptomatic or asymptomatic, with a certain degree of survivability of the virus in the environment.
+
+The individual agents’ behavior is described using an activity-based approach: people have a set of activities associated with some day hours. This agenda makes the agents move from buildings to buildings (due to the 1-hour step of the simulation). 
+
+### Interaction
+Individual agents can infect other Individual agents directly through contact or indirectly through building contamination: the virus can survive in the Building for a period of time. Interactions between Individual agents and the Authority agents occur in both directions.
+
+### Collectives
+Individual agents are part of several agents collectives: relatives, friends, colleagues, activity fellows. Nevertheless these collectives are not agentified with a specific behavior. The only impact is on the transmission in a same building. The main idea is that individuals in the same building will not have the same number of contacts with all the individuals in a (working or home) building. They thus have more chances to infect close colleagues or relatives.
+
+## Details
