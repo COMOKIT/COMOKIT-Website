@@ -64,6 +64,40 @@ Each one has a built-in method to get a default value when data is missing or mi
 
 ## Synthetic agenda
 
+
+The synthetic agenda generator provided with COMOKIT makes use of a configuration file in order to define key variables of the algorithm. In order to define them according to a case study, it should be created and placed in the case study folder, and  named `Agenda parameter.csv`, with a first column corresponding to the parameter name and a second column the provided value. The list below details all the parameters that can be defined in this file with their default value when they are omitted:
+
+ 
+ - ``non_working_days`` : List of non working days (1: Monday, 7: Sunday). Default is ``[7]``
+ - ``work_hours_begin_min`` : the minimal value for the beginning working hour (between 0 and 23). Default is ``6``
+ - ``work_hours_begin_max`` : the maximal value for the beginning working hour (between 0 and 23). Default is ``10``
+ - ``work_hours_end_min`` : the minimal value for the ending working hour (between 0 and 23). Default is ``15``
+ - ``work_hours_end_max`` : the maximal value for the ending working hour (between 0 and 23). Default is ``18``
+ - ``school_hours_begin_min`` : the minimal value for the beginning school hour (between 0 and 23). Default is ``7``
+ - ``school_hours_begin_max`` : the maximal value for the beginning school hour (between 0 and 23). Default is ``9``
+ - ``school_hours_end_min`` : the minimal value for the ending school hour (between 0 and 23). Default is ``15``
+ - ``school_hours_end_max`` : the maximal value for the ending school hour (between 0 and 23). Default is ``18``
+ - ``first_act_hour_non_working_min`` : For non working day (or people who are not working), minimal hour for the beginning of the first activity (between 0 and 23). Default is ``7``
+ - ``first_act_hour_non_working_min`` : For non working day (or people who are not working), maximal hour for the beginning of the first activity (between 0 and 23). Default is ``10``
+ - ``lunch_hours_min`` : the minimal value for the beginning of the lunch time (between 0 and 23). Default is ``11``
+ - ``lunch_hours_max`` : the maximal value for the beginning of the lunch time (between 0 and 23). Default is ``13``
+ - ``max_duration_lunch`` : the maximal duration (in hours) of the lunch time. Default is ``2``
+ - ``max_duration_default`` : the maximal duration (in hours) of other activities. Default is ``3``
+ - ``min_age_for_evening_act`` : the minimal age of individual to have an activity after school. Default is ``13``
+ - ``nb_activity_fellows_mean`` : the mean number of fellows per activity. Default is ``3.0``
+ - ``nb_activity_fellows_std`` : the standard deviation of the number of fellows per activity. Default is ``2.0``
+ - ``max_num_activity_for_non_working_day`` : the maximal number of activities for non working day. Default is ``4``
+ - ``max_num_activity_for_unemployed`` : the maximal number of activities per day for unemployed individual. Default is ``3``
+ - ``max_num_activity_for_old_people`` : the maximal number of activities per day for retired individual. Default is ``3``
+ - ``proba_activity_evening`` : the probability for people to have an activity after work. Default is ``0.7``
+ - ``proba_lunch_outside_workplace`` : the probability to have lunch outside the working place (home or restaurant). Default is ``0.5``
+ - ``proba_lunch_at_home`` : if lunch taken outside the working place, the probability of having lunch at home. Default is ``0.5``
+ - ``proba_work_outside`` : the probabilty for an individual to work outside the considered area. Default is ``0.0``
+ - ``proba_go_outside`` : the probabilty for an individual to do an activity outside the considered area. Default is ``0.0``
+ - ``building_neighbors_dist`` : the maximal distance (in meter) of the considered neigbhorhood for the "visit to neighbors" activity. Default is ``500.0``
+
+
+
 ## Activities
 
 ## Redefining parameter values
