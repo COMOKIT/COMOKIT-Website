@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Extending COMOKIT
+title: Applying COMOKIT
 nav_order: 4
 permalink: /setupYourOwn
 ---
 
-# Extending COMOKIT
+# Applying COMOKIT
 {: .no_toc }
 
 
@@ -23,7 +23,7 @@ How to apply COMOKIT to your own dataset
 ## Introduction
 
 This section describes the simplest way to use COMOKIT to explore the impact of control policies in a given case study (a case study defined by its geographical location and boundaries, possibly GIS data on the built environment, and possibly population data). 
-GAMA (with COMOKIT) must of course be already installed and running. If it not the case, please refer to the [previous documentation page](gettingStarted)
+GAMA (with COMOKIT) must of course be already installed and running. If it is not the case, please refer to the [Getting Started documentation page](gettingStarted)
 
 ## Duplicate the `COMOKIT Template Project` in your workspace
 
@@ -48,7 +48,7 @@ In order to declare or apply an experiment to a new case study, COMOKIT requires
 
 - Spatial data:
 
-  - **boundary.shp** *[Required]*  : this file should contain the boundary of the case study. _It is the only file absolutely required_ to define a new case study. More information about shapefiles and repositories are available [here](https://wiki.openstreetmap.org/wiki/Shapefiles). Videos showing how to download Shapefiles for a particular area are also available [here](https://www.youtube.com/watch?v=JN_65VXdgmA) and [here](https://www.youtube.com/watch?v=18cj3VKg9gM). 
+  - **boundary.shp** *[Required]*  : this file should contain the boundary of the case study. _It is the only file absolutely required_ to define a new case study. More information about shapefiles and repositories are available [here](https://wiki.openstreetmap.org/wiki/Shapefiles) or using the [DIVA repsitory](https://www.diva-gis.org/datadown). Videos showing how to download Shapefiles for a particular area are also available [here](https://www.youtube.com/watch?v=JN_65VXdgmA) and [here](https://www.youtube.com/watch?v=18cj3VKg9gM). 
   
   - **buildings.shp** *[Optional]* : this file should contain the buildings of the case study. Buildings are in COMOKIT the places where peoples' activities are held. The shapefile attributes table should contain a column named `type` containing the type of the building according to the [OSM specifications](https://wiki.openstreetmap.org/wiki/Map_Features#Building). If buildings are not available for the case study, COMOKIT proposes a model (in `COMOKIT/Utilities/Generate GIS Data.gaml`) that requests OSM servers with respect to the area defined in `boundary.shp` and attempts to build the `buildings.shp` file automatically. This short video will guide you through this process: 
 
