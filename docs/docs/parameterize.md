@@ -24,16 +24,16 @@ Text header
 
 ## Epidemiology
 
-## Synthetical population
+## Synthetic population
 
-As mentioned in the [ODD](link to the ODD), COMOKIT makes it possible to generate a synthetic population of agent following two path: from a csv file where each line correspond to an individual or using the built-in generator. In this paragraph we details how they can be parametrized (for a complete description of the process, please refer to the ODD). In the following sub-section we review how to customize the [built-in generator](#Built-in-generator-parametrization) and how to harmonize [file based synthetic records](#File-based-data-harmonization)
+As mentioned in its [ODD description](ODD), COMOKIT proposes two ways to generate a synthetic population of agents: either from a csv file where each line corresponds to an individual or using a built-in generator. This paragraph details how both can be parameterized. The following sub-section shows how to customize the [built-in generator](#Built-in-generator-parametrization) and how to harmonize [file based synthetic records](#File-based-data-harmonization)
 
 ### Built-in generator parametrization
 
-The default generator provided with COMOKIT makes use of a configuration files in order to define key variables of the algorithm. In order to define them according to a case study, it should be created and placed in the specific case study folder, following the convention name ``Population parameter.csv``, with first column corresponding to the parameter name and second column the provided value. The list below details all possible parameters to be define within this file with the default value when omitted:
+The default generator provided with COMOKIT makes use of a configuration file in order to define key variables of the algorithm. In order to define them according to a case study, it should be created and placed in the case study folder, and  named `Population parameter.csv`, with a first column corresponding to the parameter name and a second column the provided value. The list below details all the parameters that can be defined in this file with their default value when they are omitted:
 
  - ``male_ratio`` : the probability to be a male (``1 - male_ratio`` gives the probability to be a female). Default is ``21/41``
- - ``proba_active_family`` : the probability to create a two or more person household (``1 - proba_active_family`` being the probability to create a lone individual household). Default is ``0.95``
+ - ``proba_active_family`` : the probability to create a two or more persons household (``1 - proba_active_family`` being the probability to create a lone individual household). Default is ``0.95``
  - ``number_children_mean`` : the mean (expected value) number of children per household. Default is ``2.0``
  - ``number_children_std`` : the standard deviation (variance) to determine the number of children per household. Default is ``0.5``
  - ``number_children_max`` : the maximum number of children per household. Default is ``3``
@@ -53,26 +53,26 @@ The default generator provided with COMOKIT makes use of a configuration files i
 
 ### File based data harmonization
 
-In order to use micro-data to initialize the synthetic population of agent in COMOKIT, users should provide attribute name and value matches for ``age``, ``sex``, ``is_unemployed`` and ``household_id`` ``Individual`` attributes. For the [Version 1.0](https://comokit.org/docs/version1), these information must be given in Gaml language within user's model. We listed below which variables must be overwritten to harmonize your micro-data with COMOKIT:
+In order to use microdata to initialize the synthetic population of agents in COMOKIT, users should provide attribute names and values for ``age``, ``sex``, ``is_unemployed`` and ``household_id`` ``Individual`` attributes. In [Version 1.0](https://comokit.org/docs/version1) of COMOKIT, these information must be provided directly in the `global` section in GAML. Below are listed the variables that must be overwritten to harmonize the micro-data with COMOKIT:
 
-- ``age`` : assigne the name of micro-data age variable to ``age_var`` (i.e. ``age_var <- "age_var_name_in_csv"``) and the mapping of values in ``age_map`` (e.g. ``age_map <- ["0-14"::[0,14],"15-45"::[15,45],"46+"::[46,120]]``)
-- ``sex`` : assigne the name of micro-data sex variable to ``sex_var`` (i.e. ``sex_var <- "sex_var_name_in_csv"``) and the mapping of values in ``sex_map`` (e.g. ``sex_map <- ["homme"::0,"femme"::1]``)
-- ``is_unemployed`` : assigne the name of micro-data employement status to ``unemployed_var`` (i.e. ``unemployed_var <- "employement_var_name_in_csv"``) and the mapping of values in ``unemployed_map`` (e.g. ``unemployed_map <- ["active"::false,"inactive"::true,"unemployed"::true]``)
-- ``household_id`` : assigne the name of micro-data household identifier to ``householdID`` (i.e. ``householdID <- "household_id_name_in_csv"``)
+- ``age`` : assigns the name of micro-data age variable to ``age_var`` (i.e. ``age_var <- "age_var_name_in_csv"``) and the mapping of values in ``age_map`` (e.g. ``age_map <- ["0-14"::[0,14],"15-45"::[15,45],"46+"::[46,120]]``)
+- ``sex`` : assigns the name of micro-data sex variable to ``sex_var`` (i.e. ``sex_var <- "sex_var_name_in_csv"``) and the mapping of values in ``sex_map`` (e.g. ``sex_map <- ["man"::0,"woman"::1]``)
+- ``is_unemployed`` : assigns the name of micro-data employement status to ``unemployed_var`` (i.e. ``unemployed_var <- "employement_var_name_in_csv"``) and the mapping of values in ``unemployed_map`` (e.g. ``unemployed_map <- ["active"::false,"inactive"::true,"unemployed"::true]``)
+- ``household_id`` : assigns the name of micro-data household identifier to ``householdID`` (i.e. ``householdID <- "household_id_name_in_csv"``)
 
-Each one has a built-in method to get a default value when data is missing or missencoding. Age will be uniformly drawn in ``[0,max_age]`` (with ``max_age`` a variable of COMOKIT that can be found in ``Parameters.gaml``), Gender choosen according to a probability of 0.512 (ratio of 105 male for 100 female) and an unemployed rate of 0.03 (i.e. same rate as in the built-in generator). When no household identifier is provided in the micro-data, COMOKIT will built household as the built-in generator does, except it selected relevant individuals from the sample rather than creating them.
+Each one has a built-in method to get a default value when data is missing or missencoding. The age will be uniformly drawn in ``[0,max_age]`` (with ``max_age`` being a variable of COMOKIT that can be found in ``Parameters.gaml``), Gender chosen according to a probability of 0.512 (ratio of 105 males for 100 females) and an unemployed rate of 0.03 (i.e. same rate as in the built-in generator). When no household identifier is provided in the micro-data, COMOKIT builds households like the built-in generator does, except it selects relevant individuals from the sample rather than creating them.
 
 ## Synthetical agenda
 
 ## Activities
 
-## Redefining parameter value
+## Redefining parameter values
 
-As a general advice, parameters in ``Parameters.gaml`` and variables (e.g. in ``Global.gaml``) of COMOKIT should be redefined in user models: it is good practice to redefine them in a ``global`` section of a user created gaml file. For examples, to redefine the number of infected and recovered individuals at the beginning of a simulation, open or create a new gaml file, import all required from COMOKIT and assign new values as follow:
+As a general advice, parameters in ``Parameters.gaml`` and variables (e.g. in ``Global.gaml``) of COMOKIT should be redefined in user models: it is good practice to redefine them in a ``global`` section of a user created GAML file. For example, to redefine the number of infected and recovered individuals at the beginning of a simulation, open or create a new GAML file, import all required files from COMOKIT and assign new values as follow:
 ```
 global {
   int num_infected_init <- 10;
   int num_recovered_init <- 500; 
 }
 ```
-As a general guideline, do not change the values of parameters directly in the COMOKIT code, but rather in your own model that makes use of COMOKIT.
+As a general guideline, do not change the values of parameters directly in the COMOKIT code, but rather in your own model (that imports COMOKIT).
