@@ -101,7 +101,7 @@ optional arguments:
 
 COMOKIT provide you an XML example to launch the headless.
 
-[SCREENSHOT]
+![arbo to XML file](assets/images/arboToXMLFile.png)
 
 It has been generated with the command below
 
