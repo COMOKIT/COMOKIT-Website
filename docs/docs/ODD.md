@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Short ODD description
+title: Short model description
 nav_order: 98
 permalink: /odd
 ---
 
-# Short O.D.D. description of the COMOKIT model
+# Short description of the COMOKIT model
 {: .no_toc }
 
-We describe in this document the COMOKIT model using the standard O.D.D. protocol in its first review version.
+We describe in this page the COMOKIT model (version 1.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_v1.pdf)).
 {: .fs-6 .fw-300 }
 
 ## Table of contents
