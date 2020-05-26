@@ -23,6 +23,85 @@ Text header
 ---
 
 ## Epidemiology
+There are two different ways to set up epidemiological parameters in COMOKIT: 
+- by modifying the parameters variables in Model/Parameters.gaml (setting the variable ``load_epidemiological_parameter_from_file`` to ``false``),
+- by giving the path of a CSV file containing different values for the parameters (setting the variable ``epidemiological_parameters`` to the path of the file).
+
+In both cases, a map of parameters (``map_epidemiological_parameters``, defined in ``Model/Global.gaml``) will be generated, using different ages (int) as key of the map, and the value of the parameters.
+
+### Modifying the parameters in Model/Parameters.gaml
+The first method is easier, as the parameters are already defined and just their values have to be changed. However, it lacks flexibility and heterogeneity compared to the second method.
+
+**Note that this method is not the one used by default in COMOKIT, but the second one, providing more realistic values.**
+
+#### Environmental contamination dynamics
+The list of the epidemiological parameters presented in Model/Parameters.gaml for environmental contamination dynamics is: 
+-  ``allow_transmission_building``, allowing environmental contamination dynamics, set by default to ``true``,
+- ``basic_viral_decrease``, the decrease over time of the viral load in the environment, set by default to ``0.33``,
+- ``basic_viral_release``, the release over time of the viral load in the environment by one infected Individual, set by default to ``3.0``,
+- ``successful_contact_rate_building``, the successful contact rate for environment to human transmission derivated from the R0 and the mean infectious period, set by default to ``2.5 * 1/(14.69973*nb_step_for_one_day)``,
+
+#### Human to human transmission dynamics
+The list of the epidemiological parameters presented in Model/Parameters.gaml for human to human transmission dynamics is: 
+- ``allow_transmission_human``, allowing human to human transmission dynamics, set by default to ``true``,
+- ``init_all_ages_factor_contact_rate_asymptomatic``, the non-age-dependent factor of the successful contact rate for asymptomatic/presymptomatic human to human transmission, set by default to ``0.55``,
+- ``init_all_ages_proportion_asymptomatic``, the non-age-dependent proportion of asymptomatic individuals, set by default to ``0.3``,
+- ``init_all_ages_successful_contact_rate_human``, the non-age-dependent successful contact rate for human to human transmission derivated from the R0 and the mean infectious period, set by default to ``2.5 * 1/(14.69973)``,
+-``reduction_coeff_all_buildings_individuals``, the reduction of the contact rate for individuals belonging to different households but living in the same building, set by default to ``0.05``,
+- ``reduction_coeff_all_buildings_inhabitants``, the reduction of the contact rate for individuals belonging to different households but living in the same building, set by default to ``0.01``,
+- ``init_all_ages_distribution_type_incubation_period_symptomatic``, the non-age-dependent distribution for the incubation period of symptomatic Individuals, set by default to ``Lognormal``,
+- ``init_all_ages_parameter_1_incubation_period_symptomatic``, the first parameter for the non-age-dependent distribution for the incubation period of symptomatic Individuals, set by default to ``1.57``,
+- ``init_all_ages_parameter_2_incubation_period_symptomatic``, the second parameter for the non-age-dependent distribution for the incubation period of symptomatic Individuals, set by default to ``0.65``,
+- ``init_all_ages_distribution_type_incubation_period_asymptomatic``, the non-age-dependent distribution for the incubation period of asymptomatic Individuals, set by default to ``Lognormal``,
+- ``init_all_ages_parameter_1_incubation_period_asymptomatic``, the first parameter for the non-age-dependent distribution for the incubation period of asymptomatic Individuals, set by default to ``1.57``,
+- ``init_all_ages_parameter_2_incubation_period_asymptomatic``, the second parameter for the non-age-dependent distribution for the incubation period of asymptomatic Individuals, set by default to ``0.65``,
+- ``init_all_ages_distribution_type_serial_interval``, the non-age-dependent distribution for the serial interval, set by default to ``Normal``,
+- ``init_all_ages_parameter_1_serial_interval``, the first parameter for the non-age-dependent distribution for the incubation period of asymptomatic Individuals, set by default to ``3.96``,
+- ``init_all_ages_parameter_2_serial_interval``, the second parameter for the non-age-dependent distribution for the incubation period of asymptomatic Individuals, set by default to ``3.75``,
+- ``init_all_ages_distribution_type_infectious_period_symptomatic``, the non-age-dependent distribution for the infectious period of symptomatic Individuals, set by default to ``Lognormal``,
+- ``init_all_ages_parameter_1_infectious_period_symptomatic``, the first parameter for the non-age-dependent distribution for the infectious period of symptomatic Individuals, set by default to ``3.034953``,
+- ``init_all_ages_parameter_2_infectious_period_symptomatic``, the second parameter for the non-age-dependent distribution for the infectious period of symptomatic Individuals, set by default to ``0.34``,
+- ``init_all_ages_distribution_type_infectious_period_asymptomatic``, the non-age-dependent distribution for the infectious period of asymptomatic Individuals, set by default to ``Lognormal``,
+- ``init_all_ages_parameter_1_infectious_period_asymptomatic``, the first parameter for the non-age-dependent distribution for the infectious period of asymptomatic Individuals, set by default to ``3.034953``,
+- ``init_all_ages_parameter_2_infectious_period_asymptomatic``, the second parameter for the non-age-dependent distribution for the infectious period of asymptomatic Individuals, set by default to ``0.34``.
+
+#### Hospitalisation and severity
+The list of the hospitalisation and severity related parameters presented in Model/Parameters.gaml for human to human transmission dynamics is: 
+- ``init_all_ages_proportion_hospitalisation``, the non-age-dependent proportion of symptomatic Individuals that will need hospitalisation, set by default to ``0.2``,
+- ``init_all_ages_distribution_type_onset_to_hospitalisation``, the non-age-dependent distribution of the time between symptom onset and hospital admission for symptomatic Individuals, set by default to ``Lognormal``,
+- ``init_all_ages_parameter_1_onset_to_hospitalisation``, the first parameter of the non-age-dependent distribution of the time between symptom onset and hospital admission for symptomatic Individuals, set by default to ``3.034953``,
+- ``init_all_ages_parameter_2_onset_to_hospitalisation``, the second parameter of the non-age-dependent distribution of the time between symptom onset and hospital admission for symptomatic Individuals, set by default to ``0.34``,
+- ``init_all_ages_proportion_icu``, the non-age-dependent proportion of hospitalised Individuals that will need to go in ICU, set by default to ``0.1``,
+- ``init_all_ages_distribution_type_hospitalisation_to_ICU``, the non-age-dependent distribution of the time between hospitalisation and ICU admission for hospitalised Individuals, set by default to ``Lognormal``,
+- ``init_all_ages_parameter_1_hospitalisation_to_ICU``, the first parameter of the non-age-dependent distribution of the time between hospitalisation and ICU admission for hospitalised Individuals, set by default to ``3.034953``,
+- ``init_all_ages_parameter_2_hospitalisation_to_ICU``, the second parameter of the non-age-dependent distribution of the time between hospitalisation and ICU admission for hospitalised Individuals, set by default to ``0.34``,
+- ``init_all_ages_distribution_type_stay_ICU``, the non-age-dependent distribution of the duration of stay in ICU for Individuals, set by default to ``Lognormal``,
+- ``init_all_ages_parameter_1_stay_ICU``, the first parameter of the non-age-dependent distribution of the duration of stay in ICU for Individuals, set by default to ``3.034953``,
+- ``init_all_ages_parameter_2_stay_ICU``, the second parameter of the non-age-dependent distribution of the duration of stay in ICU for Individuals, set by default to ``0.34``,
+- ``init_all_ages_proportion_dead_symptomatic``, the non-age-dependent proportion of symptomatic individuals that will die even if treated, set by default to ``0.01``,
+
+#### Testing and mask wearing
+The list of the test and mask related parameters presented in Model/Parameters.gaml for human to human transmission dynamics is: 
+- ``init_all_ages_probability_true_negative``, the non-age-dependent probability of being tested positive when infected, set by default to ``0.92``,
+- ``init_all_ages_probability_true_positive``, the non-age-dependent probability of being tested positive when infected, set by default to ``0.89``,
+- ``init_all_ages_proportion_wearing_mask``, the non-age-dependent proportion of Individuals wearing mask, set by default to ``0.0``,
+- ``init_all_ages_factor_contact_rate_wearing_mask``, the non-age-dependent factor of successful transmission for an infectious individual wearing a mask, set by default to ``0.5``,
+
+
+### Modifying the parameters in the CSV file
+ In the CSV file, it is possible to define multiple values for the same parameter taking into account the age of the individuals. In addition, it is possible to not just provide a fixed value, but also a distribution in order to generate different values for each Individual (among Weibull, Gamma, Uniform, Normal and Lognormal distributions). In the case of providing a CSV file to set the parameters, it is still possible to force parameter values (for one experiment, for instance) by using the ``force_parameters`` map, expecting the string ID of a parameters (defined in ``Model/Constants.gaml``) and a given value. 
+Particular attention should be given to the names of the parameters provided in the CSV file, as they must be exactly the same as the string ID of the parameters. In order to define a parameter as age-depedent, multiple rows in the CSV file must begin with the same parameter string ID, and different age values. The age category will be defined with the lower bound equals to the value of the column age for the given row, and the upper bound the value of the column age for the next row with the same parameter string ID (if there are none, there will be no upper bound, including every Individuals having at least an age equals to the lower bound). The column detail in the CSV is expecting either the string ``FIXED`` (for a parameter not following a distribution), or one of the string ID of the distributions (``Weibull``, ``Gamma``, ``Normal``, ``Lognormal``, ``Uniform``). Parameter_1 is expecting the value of the parameter (if ``FIXED``) or the first parameter of the gama function for the given distribution. Parameter_2 is used only if Detail is a distribution, and provides the second parameter of the gama function for the given distribution.
+
+All the parameters can have different values for given age categories but: 
+- ``Transmission_human`` (corresponding to ``allow_transmission_human`` in ``Model/Parameters.gaml``), allowing human to human transmission dynamics,
+- ``Transmission_building`` (corresponding to ``allow_transmission_building`` in ``Model/Parameters.gaml``), allowing environmental contamination dynamics,
+- ``Successful_contact_rate_building`` (corresponding to ``successful_contact_rate_building`` in ``Model/Parameters.gaml``), the transmission building to human occuring due to environmental contamination, 
+- ``Basic_viral_decrease`` (corresponding to ``basic_viral_decrease`` in ``Model/Parameters.gaml``), the decrease over time in viral load in the environment,
+can't be age-dependent for obvious reasons. 
+
+The default values for the different parameters are stored in the file ``Parameters/Epidemiological Parameters.csv``.
+
+
 
 ## Synthetic population generation
 
