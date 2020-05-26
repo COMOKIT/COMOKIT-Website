@@ -195,6 +195,29 @@ In order to define it according to a case study, it should be created and placed
 | 61      | 120     | 0   | 2.0               | 2.0             | 0.5    | 1.0      | 0.5     | 0.5              | 0.2   | 2.0            |
 | 61      | 120     | 1   | 2.0               | 2.0             | 0.5    | 2.0      | 0.5     | 0.5              | 0.1   | 2.0            |
 
+## To link building types and activities
+
+Synthetic agenda of agents provides time use according to a sequence of activites to be carried out in buildings. In order to choose appropriate building corresponding to their activities, it is necessary to determine case study related building types and to attached these types to an activity.  
+
+### Building types
+COMOKIT provides built-in types of buildings, most of which have been taken from the [OSM nomenclature](https://wiki.openstreetmap.org/wiki/Key:building). They are stored in the ``Paramaeters/Building type per activity type.csv`` file, with first column standing for activity type, and following ones to corresponding building types. For example, default provided type of building for ``staying_at_home`` activity are: ``" "`` (empty string), ``yes``, ``house``, ``manor``, ``apartments``, ``caravan``, ``hostel``, ``home`` and ``Tent Shelter``. For any missing type, i.e. case study ``buildings.shp`` file where home place type is not in the previous list, you may have to add in a new column the corresponding type name. Hence, COMOKIT will be able to link activity types to custom building types.
+
+### Building file
+The building file is used to define the agent preferences for building types according to age and sex. The higher the weigths are the higher individual agent will tends to carried out activities within this particular type of building. For example, agents can perform a leisure activity in several types of buildings, including cinema, karaoke, coffeshops and many more defined in ``Building per type activity type.csv`` (see [Activity to building](#Buildin-types) section). In that respect, the weights attached to building type will determine the corresponding probability to carry out a leisure activity in a particular building. Any missing building type will be assigned a weight equal to ``1.0``.
+
+As for the activity file, the building file should be created and placed in a case study folder, and named ``Building type weights.csv``. The table below show a snippet example of a file content: 
+
+| Age min | Age max | sex | playground | park | cinema | place_of_worship |
+|---------|---------|-----|------------|------|--------|------------------|
+| 0       | 10      | 0   | 1.0        | 1.0  | 0.5    | 0.5              |
+| 0       | 10      | 1   | 1.0        | 1.0  | 0.5    | 0.5              |
+| 11      | 18      | 0   | 0.2        | 0.5  | 1.0    | 0.5              |
+| 11      | 18      | 1   | 0.2        | 0.5  | 1.0    | 0.5              |
+| 19      | 60      | 0   | 1.0        | 1.0  | 1.0    | 1.0              |
+| 19      | 60      | 1   | 1.0        | 1.0  | 1.0    | 2.0              |
+| 61      | 120     | 0   | 2.0        | 2.0  | 0.5    | 1.0              |
+| 61      | 120     | 1   | 2.0        | 2.0  | 0.5    | 2.0              |
+
 ## Redefining parameter values
 
 As a general advice, parameters in ``Parameters.gaml`` and variables (e.g. in ``Global.gaml``) of COMOKIT should be redefined in user models: it is good practice to redefine them in a ``global`` section of a user created GAML file. For example, to redefine the number of infected and recovered individuals at the beginning of a simulation, open or create a new GAML file, import all required files from COMOKIT and assign new values as follow:
@@ -204,4 +227,4 @@ global {
   int num_recovered_init <- 500; 
 }
 ```
-As a general guideline, do not change the values of parameters directly in the COMOKIT code, but rather in your own model (that imports COMOKIT).
+As a general guideline, do not change the values of parameters directly in the COMOKIT code, but rather in your own model (that imports COMOKIT). This advice is not mandatory at all, and modifying your local version of COMOKIT is functional. However, for the sake of clarity, it is recommended to redefine the parameters/variables of interest for you, in a model specific user created file.
