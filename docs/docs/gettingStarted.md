@@ -24,7 +24,7 @@ How to run COMOKIT locally
 
 You can install and run COMOKIT by two ways: 
 - you can download and run the _All-In-One_ archive, 
-- you can manually install GAMA and import COMOKIT inside. 
+- you can manually install GAMA (1.8.1 or above) and import COMOKIT inside. 
 
 > We do recommend you to pick the first option (especially if you are a beginner).
 
@@ -43,7 +43,7 @@ Here you are, you have an instance of COMOKIT running on your computer.
 
 If you want to install and run the model yourself on your computer you should: 
 
-- First, download and extract the [GAMA Continuous Build version](https://github.com/gama-platform/gama/releases/tag/continuous) (if you do not know which version to take, choose the one with JDK). If you need more information about how to install GAMA, check the [installation page](https://gama-platform.github.io/wiki/Installation)
+- First, download and extract the [GAMA 1.8.1 version](https://github.com/gama-platform/gama/releases/tag/1.8.1) or [above](https://github.com/gama-platform/gama/releases) (if you do not know which version to take, choose the one with JDK). If you need more information about how to install GAMA, check the [installation page](https://gama-platform.github.io/wiki/Installation)
 - Second, download the model [on GitHub](https://github.com/COMOKIT/COMOKIT-Model) (click [here](https://github.com/COMOKIT/COMOKIT-Model/archive/master.zip) to download it automatically)
 - Extract that ZIP file somewhere on your computer and [import it on GAMA](https://gama-platform.github.io/wiki/ImportingModels) as a GAMA project (see pictures below).
 
