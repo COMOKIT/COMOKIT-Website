@@ -60,7 +60,7 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 To install COMOKIT Headless on your server you can either [download a COMOKIT release](https://github.com/COMOKIT/COMOKIT-Model/releases/) and the [headless tools](https://github.com/COMOKIT/COMOKIT-HPC) or directly download the [HPC archive](https://github.com/COMOKIT/COMOKIT-HPC/releases/) (which packages GAMA with an embedeed JDK, COMOKIT for Linux and the needed tools).
 
-> If you don't use a version of GAMA provided with one of our release, be sure to use [GAMA Continuous Built version](https://github.com/gama-platform/gama/releases/tag/continuous) and a [JAVA Developpement Kit (JDK) 8](https://en.wikipedia.org/wiki/Java_version_history#Java_SE_8).
+> If you don't use a version of GAMA provided with one of our release, be sure to use [GAMA 1.8.1 version](https://github.com/gama-platform/gama/releases/tag/1.8.1) (or [above](https://github.com/gama-platform/gama/releases)) and a [JAVA Developpement Kit (JDK) 8](https://en.wikipedia.org/wiki/Java_version_history#Java_SE_8).
 
 ### Setting up your server
 
