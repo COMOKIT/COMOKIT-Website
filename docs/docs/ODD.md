@@ -8,7 +8,7 @@ permalink: /odd
 # Short description of the COMOKIT model
 {: .no_toc }
 
-We describe in this page the COMOKIT model (version 1.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_v1.pdf)).
+We describe in this page the COMOKIT model (version 1.0.1) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_v1.0.1.pdf)).
 {: .fs-6 .fw-300 }
 
 ## Table of contents
