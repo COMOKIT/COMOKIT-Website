@@ -132,7 +132,7 @@ The default generator provided with COMOKIT makes use of a configuration file in
 
 ### File based data harmonization
 
-In order to use microdata to initialize the synthetic population of agents in COMOKIT, users should provide attribute names and values for ``age``, ``sex``, ``is_unemployed`` and ``household_id`` ``Individual`` attributes. In [Version 1.0](https://comokit.org/docs/version1) of COMOKIT, these information must be provided directly in the `global` section in GAML. Below are listed the variables that must be overwritten to harmonize the micro-data with COMOKIT:
+In order to use microdata to initialize the synthetic population of agents in COMOKIT, users should provide attribute names and values for ``age``, ``sex``, ``is_unemployed`` and ``household_id`` ``Individual`` attributes. In [Version 1.0.1](https://comokit.org/docs/version1) of COMOKIT, these information must be provided directly in the `global` section in GAML. Below are listed the variables that must be overwritten to harmonize the micro-data with COMOKIT:
 
 - ``age`` : assigns the name of micro-data age variable to ``age_var`` (i.e. ``age_var <- "age_var_name_in_csv"``) and the mapping of values in ``age_map`` (e.g. ``age_map <- ["0-14"::[0,14],"15-45"::[15,45],"46+"::[46,120]]``)
 - ``sex`` : assigns the name of micro-data sex variable to ``sex_var`` (i.e. ``sex_var <- "sex_var_name_in_csv"``) and the mapping of values in ``sex_map`` (e.g. ``sex_map <- ["man"::0,"woman"::1]``)
