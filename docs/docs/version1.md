@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Version 1.0
+title: Version 1.0.1
 nav_order: 99
 permalink: /version1
 search_exclude: true
 ---
 
-# Version 1.0 of COMOKIT is now available !
+# Version 1.0.1 of COMOKIT is now available !
 {: .no_toc }
 
 <p align="center">
