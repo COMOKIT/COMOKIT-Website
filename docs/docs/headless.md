@@ -89,8 +89,9 @@ optional arguments:
   -r INT, --replication INT
                         Number of replication for each paramater space (default: 1)
   -s INT, --split INT   Split XML file every S replications (default: 1)
-  -o STR, --output STR  Path to folder where save output CSV (default: "../../batch_output")
-  -u STR, --until STR   Stop condition for the simulations (default: "world.sim_stop()")
+  -o STR, --output STR  Relative path from GAML file to folder where save output CSV (default:
+                        "../../batch_output" => /path/to/COMOKIT-Model/COMOKIT/batch_output)
+  -u STR, --until STR   Stop condition for the simulations (default: "world.sim_stop()"
   -S INT, --seed INT    Starting value for seeding simulation (default: 0)
   -f INT, --final INT   Final step for simulations
   -xml <experiment name> /path/to/file.gaml /path/to/file.xml
@@ -149,7 +150,7 @@ To do so you can change the script parameters to generate a bigger exploration p
 ```bash
 $ python3 ~/path/to/COMOKIT-HPC/pre-processing/generateMultipleXML.py \
 	-xml "SensitivityHeadless" ../Experiments/Sensitivity\ Analysis/Sensitivity\ Analysis.gaml  ./testHeadless.xml \
-	-o ~/COMOKIT-HPC/results/ -r 1000 \
+	-o ../results/ -r 1000 \
 	-s 36 -f 5000
 Total number of parameters detected : 0
 Total number of possible combinaison : 1
@@ -188,14 +189,14 @@ So, with this advances command we created an `Experiment Plan` with 1000 simulat
 
 > Note that if you split your XML file, it will automatically change the name to have a unique id on every file.
 
-### Run GAMA Headless
-First you need to export $GAMA_CLASSPATH environment variable.
-```
-$ export $GAMA_CLASSPATH=/path/to/GAMA/application
+## Launch headless
+
+Once you have your XML files, you're ready to launch the GAMA headless with a simple command :
+
+```bash
+$ bash /path/to/GAMA/headless/gama-headless.sh ./testHeadless-0.xml ./output
 ```
 
-Then, run the command line as the example bellow. More details in the [GAMA documentation](https://gama-platform.github.io/wiki/Headless#command).
-```
+> The 2 script's parameter (`./output`) is never use within COMOKIT but is requested by the GAMA Headless, so don't mind about this folder content. All the CSV raw data are saved in the location precised while you've been creating your XML files.
 
-$ bash gama-headless.sh /tmp/headless/mask.xml outputHeadLessFolder
-```
+If you need more explainations about the headless, please refer to the official [GAMA documentation](https://gama-platform.github.io/wiki/Headless#command).
