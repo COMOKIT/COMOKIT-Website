@@ -12,7 +12,7 @@
     <br />
     <img src="https://github.com/COMOKIT/COMOKIT-Website/workflows/Jekyll%20site%20CI/badge.svg?branch=master" alt="Jekyll site CI" />
     ·
-    <img src="https://img.shields.io/discord/690125443952672780?label=Discord" alt="Discord" />
+    <img src="https://img.shields.io/github/v/release/COMOKIT/COMOKIT-Model" alt="COMOKIT Release version" />
   </p>
 </p>
 
