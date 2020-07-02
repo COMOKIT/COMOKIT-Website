@@ -4,15 +4,15 @@
     COMOKIT-Website 📘
     <br />
     <br />
-    <img src="https://img.shields.io/github/license/COMOKIT/COMOKIT-Website" alt="License" />
+    <a href="https://github.com/COMOKIT/COMOKIT-Website/blob/master/LICENSE"><img src="https://img.shields.io/github/license/COMOKIT/COMOKIT-Website" alt="License" /></a>
     ·
-    <img src="https://img.shields.io/github/issues/COMOKIT/COMOKIT-Website" alt="GitHub issues" />
+    <a href="https://github.com/COMOKIT/COMOKIT-Website/issues"><img src="https://img.shields.io/github/issues/COMOKIT/COMOKIT-Website" alt="GitHub issues" /></a>
     ·
-    <img src="https://img.shields.io/github/contributors/COMOKIT/COMOKIT-Website" alt="GitHub contributors" />
+    <a href="https://github.com/COMOKIT/COMOKIT-Website/graphs/contributors"><img src="https://img.shields.io/github/contributors/COMOKIT/COMOKIT-Website" alt="GitHub contributors" /></a>
     <br />
-    <img src="https://github.com/COMOKIT/COMOKIT-Website/workflows/Jekyll%20site%20CI/badge.svg?branch=master" alt="Jekyll site CI" />
+    <a href="https://github.com/COMOKIT/COMOKIT-Website/actions"><img src="https://github.com/COMOKIT/COMOKIT-Website/workflows/Jekyll%20site%20CI/badge.svg?branch=master" alt="Jekyll site CI" /></a>
     ·
-    <img src="https://img.shields.io/github/v/release/COMOKIT/COMOKIT-Model" alt="COMOKIT Release version" />
+    <a href="https://github.com/COMOKIT/COMOKIT-Model/releases/latest"><img src="https://img.shields.io/github/v/release/COMOKIT/COMOKIT-Model?label=COMOKIT%20release" alt="COMOKIT Release version" /></a>
   </p>
 </p>
 
