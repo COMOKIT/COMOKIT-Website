@@ -983,18 +983,21 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-.portfolio .portfolio-item {
+.portfolio .portfolio-item-ex,
+.portfolio .portfolio-item-pr {
   margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.portfolio #portfolio-flters-ex li,
+.portfolio #portfolio-flters-pr li {
   padding: 0;
   margin: 0 auto 20px auto;
   list-style: none;
   text-align: center;
 }
 
-.portfolio #portfolio-flters li {
+.portfolio #portfolio-flters-ex li,
+.portfolio #portfolio-flters-pr li {
   cursor: pointer;
   display: inline-block;
   padding: 8px 15px 10px 15px;
@@ -1008,12 +1011,14 @@ section {
   border-radius: 3px;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters-ex li:hover, .portfolio #portfolio-flters-ex li.filter-active,
+.portfolio #portfolio-flters-pr li:hover, .portfolio #portfolio-flters-pr li.filter-active {
   color: #fff;
   background: #3498db;
 }
 
-.portfolio #portfolio-flters li:last-child {
+.portfolio #portfolio-flters-ex li:last-child,
+.portfolio #portfolio-flters-pr li:last-child {
   margin-right: 0;
 }
 
@@ -1591,4 +1596,14 @@ section {
 
 #footer .footer-links a:hover {
   color: #3498db;
+}
+
+/*--------------------------------------------------------------
+# CUSTOM
+--------------------------------------------------------------*/
+.portfolio-item-pr img {
+  height: 247.5px;
+}
+.portfolio-item-pr .portfolio-wrap{
+  background: none;
 }
