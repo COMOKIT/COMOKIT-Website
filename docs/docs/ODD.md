@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Model description
-nav_order: 98
+nav_order: 10
 permalink: /odd
 ---
 
