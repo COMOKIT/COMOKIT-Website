@@ -26,6 +26,11 @@ It's about COMOKIT
 }
 </style>
 
+## Scientific articles
+
+- [Drogoul, A., Taillandier, P., Gaudou, B., Choisy, M., Chapuis, K., Huynh, N. Q. , Nguyen, N. D., Philippon, D., Brugière, A., and Larmande, P. (2020) Designing social simulation to (seriously) support decision-making: COMOKIT, an agent-based modelling toolkit to analyze and compare the impacts of public health interventions against COVID-19 . Review of Artificial Societies and Social Simulation, 27th April 2020. https://rofasss.org/2020/04/27/comokit/](https://rofasss.org/2020/04/27/comokit/)
+- [Gaudou, B., Huynh, N. D., Philippon, D., Brugière, A., Chapuis, K., Taillandier, P., Larmande, P., and Drogoul, A. (2020) COMOKIT: a modeling kit to understand, analyze and compare the impacts of mitigation policies against the COVID-19 epidemic at the scale of a city . Front. Public Health. doi: 10.3389/fpubh.2020.563247](https://www.frontiersin.org/articles/10.3389/fpubh.2020.563247/abstract)
+
 ## General articles
 
 ### French
@@ -58,7 +63,3 @@ It's about COMOKIT
 ### Vietnamese
 
 - [VTV1 COMOKIT - Vietnamese official TV news (from 21:00)](https://vtv.vn/video/song-moi-09-8-2020-453234.htm)
-
-## Scientific articles
-
-- [Drogoul, A., Taillandier, P., Gaudou, B., Choisy, M., Chapuis, K., Huynh, N. Q. , Nguyen, N. D., Philippon, D., Brugière, A., and Larmande, P. (2020) Designing social simulation to (seriously) support decision-making: COMOKIT, an agent-based modelling toolkit to analyze and compare the impacts of public health interventions against COVID-19 . Review of Artificial Societies and Social Simulation, 27th April 2020. https://rofasss.org/2020/04/27/comokit/](https://rofasss.org/2020/04/27/comokit/)
