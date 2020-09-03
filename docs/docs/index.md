@@ -27,3 +27,14 @@ COMOKIT is a complex integrated model that combines several specialized sub-mode
 
 Please also refer to the [official GAMA documentation](https://gama-platform.github.io/wiki/PlatformDocumentation) for all matters related to the operation of the platform. 
 
+## Citing COMOKIT
+
+If you use COMOKIT in your research and want to cite it (in a paper, presentation, whatever), please use this reference:
+
+> Gaudou, B., Huynh, N. D., Philippon, D., Brugière, A., Chapuis, K., Taillandier, P., Larmande, P., and Drogoul, A. (2020) COMOKIT: a modeling kit to understand, analyze and compare the impacts of mitigation policies against the COVID-19 epidemic at the scale of a city . Front. Public Health., [doi:10.3389/fpubh.2020.563247]
+
+or you can choose to cite the website instead:
+
+> COMOKIT website, https://comokit.org
+
+A complete list of references (papers and PhD theses on or using COMOKIT) is available on the [press page](press).
