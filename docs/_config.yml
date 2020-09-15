@@ -41,6 +41,16 @@ aux_links:
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2020 COMOKIT. Distributed by an <a href=\"https://github.com/COMOKIT/COMOKIT-Model/tree/master/LICENSE\">GPL 3-0 license.</a>"
 
+back_to_top: true
+back_to_top_text: "Back to top"
+
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/COMOKIT/COMOKIT-Website" # the github URL for your repo
+gh_edit_branch: "master" # the branch that your docs is served from
+gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
+
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
 

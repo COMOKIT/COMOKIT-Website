@@ -30,7 +30,7 @@ You can install and run COMOKIT by two ways:
 
 ## Bundled install (easy)
 
-- First you should [download the All-In-One](https://github.com/COMOKIT/COMOKIT-Model/releases/tag/v1.0) archive for your system (Windows, MacOS or Linux).
+- First you should [download the All-In-One](https://github.com/COMOKIT/COMOKIT-Model/releases/latest) archive for your system (Windows, MacOS or Linux).
 - Unzip it on your computer (the place is not important).
 - Open the extracted folder.
 - Start the GAMA Application.
