@@ -64,7 +64,7 @@ In order to declare or apply an experiment to a new case study, COMOKIT requires
 
 You can find examples of complete datasets in the [default datasets folder](https://github.com/COMOKIT/COMOKIT-Model/tree/master/COMOKIT/Datasets) included in COMOKIT (folder `COMOKIT/Datasets` in your workspace) or [in the additional datasets repository](https://github.com/COMOKIT/COMOKIT-Model/tree/master/COMOKIT/Datasets). 
 
-- **Demographic data: **
+- **Demographic data:**
 
   - **population.csv** *[Optional]*: a file that contains individuals with some basic attributes, i.e. age, gender, employement status and household identifier. _If this file is not present_, the population will be generated based on the buildings available.
   
