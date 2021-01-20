@@ -1608,3 +1608,10 @@ section {
 .portfolio-item-pr .portfolio-wrap{
   background: none;
 }
+div.row-images > div {
+  display: flex;
+}
+div.row-images > div > img {
+  margin: auto;
+  max-width: 125px;
+}
