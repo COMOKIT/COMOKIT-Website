@@ -22,22 +22,28 @@ jobs:
       # Have to cd every time
       # Every command is isolated and position is not persistant
       - name: Install just-the-docs
-        run: cd docs && gem install just-the-docs
+        working-directory: ./docs
+        run: gem install just-the-docs
       
       - name: Install jenkyll plugins
-        run: cd docs && bundle install --full-index
+        working-directory: ./docs
+        run: bundle install --full-index
 
       - name: Create search engine
-        run: cd docs && bundle exec just-the-docs rake search:init
+        working-directory: ./docs
+        run: bundle exec just-the-docs rake search:init
 
       - name: Build website
-        run: cd docs && bundle exec jekyll build
+        working-directory: ./docs
+        run: bundle exec jekyll build
 
       - name: Create output folder
         run: mkdir ./releaseFolder
 
       - name: Move built doc
-        run: mv ./docs/_site ./releaseFolder/docs && rm -fr ./docs/
+        run: |
+          mv ./docs/_site ./releaseFolder/docs
+          rm -fr ./docs/
         
       - name: Move landing static page
         run: find . -maxdepth 1 -not -name ".*" -not -name "releaseFolder" -exec mv {} ./releaseFolder \;
