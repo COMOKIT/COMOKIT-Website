@@ -19,7 +19,9 @@ jobs:
           ruby-version: 2.7.x
           
       - name: Bundle - check version
-        run: bundle -v
+        run: |
+          gem update bundler
+          bundle -v
       
       # Have to cd every time
       # Every command is isolated and position is not persistant
