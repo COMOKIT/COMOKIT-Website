@@ -1,0 +1,28 @@
+---
+layout: default
+title: COMOKIT Template
+parent: Official COMOKIT extensions
+nav_order: XXX
+has_children: false
+permalink: /officialExtensions/template
+published: false
+---
+
+I'm a template ! 📄
+
+I'm usefull because the header is already setup for the website integration ! 
+
+🗃️ To use me :
+1. Duplicate me
+1. Rename me:
+    1. Change the file name <template>
+    1. Remove the `.old` at the end to turn me as a MarkDown file
+1. Change my header
+    1. Update the `title`
+    1. Update the `nav_order`
+    1. Update the `permalink` second slash (change the "template" URL's part)
+    1. Remove `published` line (entirely !)
+1. Fill up the text page
+1. Git push me
+
+Tada ! You finished and uploaded a new COMOKIT extension page ! 👏👏👏
