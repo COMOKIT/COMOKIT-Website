@@ -9,10 +9,7 @@ permalink: /officialExtensions/C-Albatross
 
 # COMOKIT Albatross (C-Albatross)
 
-COMOKIT Albatross is a dedicated version of COMOKIT to simulate the spread of SARS-CoV-2 at the scall of the Netherland with the support 
-for Albatross pre-generated mobility agenda. The daily activities are modeled at the minute wide step, changing default COMOKIT behavior at the one hour 
-temporal scall. Epidemiological dynamic have been modified as well to account for the larger atomic spatial unit, which is buildings block rather than building.
-The upscall spatial resolution makes it possible to simulate wider region, and fits the required spatial distribution of activities as modeled using Albatross agenda generator.
+COMOKIT-Albatross is a dedicated custom adaptation  of COMOKIT. It  simulates the spread of SARS-CoV-2 at the scale of the Netherlands. The activity diary for COMOKIT comes from the pre-generated mobility agenda in Albatross. The daily activities in Albatross are modelled at the precision of a minute, while the default COMOKIT behavior is modelled at the precision of one hour. The atomic spatial unit of this extension is at a Dutch 6-digit Postal Block level compared to the building level in COMOKIT. Epidemiological dynamics for COMOKIT-Albatross has also been modified to take into account  this larger atomic spatial unit. The larger spatial resolution makes it possible to simulate a wider region, and fits the required spatial distribution of activities as modelled in Albatross agenda generator.
 
 # C-Albatross : extends activity behavior in COMOKIT
 
@@ -20,7 +17,7 @@ The upscall spatial resolution makes it possible to simulate wider region, and f
 
 TODO
 
-## Upscalling daily activity location
+## Upscaling daily activity location
 
 # C-Albatross : revised epidemiological dynamic
 
