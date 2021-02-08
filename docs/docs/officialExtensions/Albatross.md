@@ -20,8 +20,8 @@ Albatross, currently in its version IV was first developed in the year 2000. Bet
 # Model Summary
 
 | Item | COMOKIT | COMOKIT-ALBATROSS | ALBATROSS |
-|----|---------|-------------------|-----------|
-|  Time Step  |    60 min    |         [10,15,30,60] min         |     1min   |
+|:----:|:-------:|:-----------------:|:---------:|
+|  Time Step  | 60 min | [10,15,30,60] min | 1min |
 | Spatial Unit | Building | Dutch-6 digit post code level | Dutch - 4 digit post code level |
 | Spatial Unit - Area |     -    |   3000-7000 sq.m   |     0.8mil-1.9mil sq.m|
 | Social network model |     Yes    |         Yes        |     No     |
