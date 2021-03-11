@@ -61,7 +61,7 @@ The probability to become infected (exposed) for individual *n* at a time step ð
 
 *t*: a time step when individual *n* leaves a building (or equally means a time step when activity *k* ends). For example, a time step where t5 belongs in the figure below.
 
-![](albatross_duration.png)
+![](/docs/docs/officialExtensions/albatross_duration.png)
 
 
 
