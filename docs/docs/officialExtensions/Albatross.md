@@ -53,7 +53,7 @@ The probability to become infected (exposed) for individual *n* at a time step ð
 
 
 
-$ P_{n,t} = 1 - \exp{[-\theta\sum_{m}^{M} q_{m,t} \times i_{n,m,k} \times \tau_{n,m,k}]} $
+![ P_{n,t} = 1 - \exp{[-\theta\sum_{m}^{M} q_{m,t} \times i_{n,m,k} \times \tau_{n,m,k}]} ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle++P_%7Bn%2Ct%7D+%3D+1+-+%5Cexp%7B%5B-%5Ctheta%5Csum_%7Bm%7D%5E%7BM%7D+q_%7Bm%2Ct%7D+%5Ctimes+i_%7Bn%2Cm%2Ck%7D+%5Ctimes+%5Ctau_%7Bn%2Cm%2Ck%7D%5D%7D+)
 
 
 
@@ -61,9 +61,7 @@ $ P_{n,t} = 1 - \exp{[-\theta\sum_{m}^{M} q_{m,t} \times i_{n,m,k} \times \tau_{
 
 *t*: a time step when individual *n* leaves a building (or equally means a time step when activity *k* ends). For example, a time step where t5 belongs in the figure below.
 
-
-
-![img](duration.png)
+![](albatross_duration.png)
 
 
 
