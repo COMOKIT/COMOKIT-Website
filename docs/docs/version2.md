@@ -15,7 +15,7 @@ search_exclude: true
 
 In the face of the COVID-19 pandemic, public health authorities around the world have experimented, in a short period of time, with various combinations of interventions at different scales. However, as the pandemic continues to progress, there is a growing need for tools and methodologies to quickly analyze the impact of these interventions and answer concrete questions regarding their effectiveness, range and temporality.
 
-**COMOKIT**, the COVID-19 modeling kit, is such a tool. It is a set of computer models that allows intervention strategies to be explored _in silico_ before their possible implementation phase. It can take into account important dimensions of policy actions, such as the heterogeneity of individual responses or the spatial aspect of containment strategies. 
+**COMOKIT**, the COVID-19 modeling kit, is such a tool. It is a set of computer models that allows to explore _in silico_ intervention strategies before their eventual implementation phase and this at different scales: from the building scale to the global scale.
 
 In **COMOKIT**, built using the agent-based [modeling and simulation platform GAMA](http://gama-platform.org), the profiles, activities and interactions of people, person-to-person and environmental transmissions, individual clinical statuses, public health policies and interventions are explicitly represented and they all serve as a basis for describing the dynamics of the epidemic in a detailed and realistic representation of space. 
 
