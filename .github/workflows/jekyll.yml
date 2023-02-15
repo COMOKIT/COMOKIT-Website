@@ -16,12 +16,12 @@ jobs:
       - name: Setup Ruby for use with actions
         uses: ruby/setup-ruby@v1.138.0
         with:
-          ruby-version: 3.2.1
+          ruby-version: 3.0.5
           
       - name: Bundle - check version
         run: |
-          gem update bundler
-          bundle -v
+          gem install bundler -v '~> 2.3.5'
+          bundle -v # Should be 2.3.X
       
       # Have to cd every time
       # Every command is isolated and position is not persistant
