@@ -53,26 +53,15 @@ jobs:
         run: find . -maxdepth 1 -not -name ".*" -not -name "releaseFolder" -exec mv {} ./releaseFolder \;
 
       - name: Upload to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v1.5.1
+        uses: crazy-max/ghaction-github-pages@v3
         with:
-          # GitHub repository where assets will be deployed (default current)
-          #repo: # optional
-          # Git branch where assets will be deployed
-          #target_branch: # optional, default is gh-pages
-          # Create incremental commit instead of doing push force
-          keep_history: false
           # Allow an empty commit to be created
           allow_empty_commit: false
           # Build directory to deploy
           build_dir: ./releaseFolder
-          # Commit author's name
-          committer_name: Github Actions
-          # Commit author's email
-          committer_email: actions@github.com
-          # Commit message
-          #commit_message: # optional
+          # Allow Jekyll to build your site (default true)
+          jekyll: false
           # Write the given domain name to the CNAME file
           fqdn: comokit.org # optional  
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_PAT: ${{ secrets.GH_PAT_ROIARTHURB }}
