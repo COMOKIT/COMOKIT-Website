@@ -5,11 +5,11 @@ nav_order: 10
 permalink: /odd
 ---
 # Short description of the COMOKIT tookit
+{: .no_toc }
 COMOKIT proposes 3 models based on a common foundation, each adapted to a different scale of analysis: the Meso model corresponds to the historical model of COMOKIT and is adapted to simulations at the scale of a neighborhood or a small city. The Micro model allows to represent explicitly the movements of people and is adapted to simulations at the scale of a building or a small set of buildings. Finally, COMOKIT macro, which does not propose an individual representation of people, is adapted to perform large-scale simulations.
 
 # Description of the COMOKIT Meso model
 {: .no_toc }
-
 We describe in this page the COMOKIT Meso model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Meso_v2.pdf)).
 {: .fs-6 .fw-300 }
 
@@ -102,3 +102,81 @@ Once weekly and daily agendas have been created at initialization, `Individual` 
 ### Institutions
 
 The `Authority` agent is in charge of applying one or several mitigation policies on the whole case study or on some local spaces. The policies can impact the simulation in two ways. Every step, the `Authority` can proactively perform some actions encoded in the policy, e.g. conduct a given number of tests on the population. On the other hand, each `Individual` agent asks the `Authority` whether it is allowed to execute a given `Activity`. In this case, the `Authority` will make its choice based on what is allowed by its policies that are currently applied.
+
+# Description of the COMOKIT Micro model
+{: .no_toc }
+We describe in this page the COMOKIT Micro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Micro_v2.pdf)).
+{: .fs-6 .fw-300 }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+
+## Overview 
+
+### Purpose
+
+This model aims at simulating and comparing the application of COVID-19 spread mitigation policies at the scale of a building or a small set of buildings, the transmission of the disease being modeled at the individual scale. Its purpose is to support deciders and researchers in answering questions such as: Is the containment of some rooms more effective than that of an entire floor? What is the impact of wearing masks on the dynamics of the epidemic? What should be the maximum density to limit spread? What proportion of the population should be allowed to undertake activities during a lockdown?
+
+Two case studies are provided with the model: one concerning a classic office with a second building representing the office restaurant; one concerning the hospital of Danang.
+
+### Entities, state variables, and scales
+
+#### Scales
+
+The simulations are executed at the scale of a set of buildings. The smallest considered spatial units are individual rooms.
+
+The simulations are not launched from a specific starting date, but rather from the introduction of the first infected cases in the population and will run until the end of the epidemic. The simulation step is set to 1 minute. 
+
+
+#### Entities
+
+The model is designed to simulate the COVID-19 spread at the individual scale. As a consequence, the core entity of the model is the `Individual` kind of agents (or species): it represents individual users of the buildings with their individual characteristics (age, sex, employment status) and their epidemiological status, whether they have been tested, and other epidemiological individual-dependent values (e.g. latent_time, infectious_time … c.f. the epidemiological submodel description for more details). They perform their daily activities (including going to their office, going to the restaurant, going to the meeting room…) depending on their personal agenda. This agenda is a generated set of Activity.
+
+`Room` agents are spatial entities where the `Individual` agents can perform an `Activity`. A `Room` has one or several `RoomEntry` agents and several `Wall` agents. It is located at a specific floor of a `Building` agent. A specific type of `Room` is `Elevator`, allowing `Individual` agents to pass from one floor to another one. In addition to `Room` agents, a `Building` agent has one or several `BuildingEntry` agents. The global environment is characterized by `Building` agents, but also by one or several `AreaEntry` agents and by `PedestrianPath` agents representing the path that `Individual` agents can follow to move.
+
+The `Individual` agent’s behavior is driven by their agenda attribute that associates to some date an `Activity`. An `Activity` is mainly a way to choose the spatial unit(s) in which the `Individual` agents have to be located or to move to at each simulation step. the last type of spatial entity are the `UnitCell` agents, which allow to take into account the environmental contamination 
+
+We have also defined additional specific `Activity` species to represent the main classical kinds of `Activity`: `ActivityLeaveArea`, `ActivityGotoOffice`, `ActivityGotoRestaurant`, `ActivityGotoRoom`. Of course, customs activities can also be created from the generic `Activity` species.
+
+
+### Process overview and scheduling
+
+The model simulates the spread of the COVID-19 in a population at the individual level. The dynamics of the model can be summarized by two main dynamics: the epidemic dynamics and the activities of the `Individual` agents, following their agenda.
+
+There are three different pathways of infection for `Individual` agents: either through Individual-to-Individual transmission, through persistence of the virus in the air, and through persistence of the virus on the physical objects. When an infectious Individual is located in a building, it can release a virus load on the unit cell it is located in, which can survive several hours. In addition, it can release a virus load in the room it is located in. Individuals who will come to this unit cell/room can thus become infected by the viral load present in the unit cell/room itself. As soon as an `Individual` is infected, its epidemic status will be described by a set of states and transitions (given probabilities taken from the up-to-date COVID-19 literature).
+
+A simulation step starts by the evolution of the viral load in the unit cells and in the rooms (it decreases over time, before disappearing). Then the `Individual` agents behave. They first evaluate whether they are infected or infect other `Individual` agents or release virus load in their current unit cell/room. They then update their epidemic status (given the model detailed in the Sub-model Section) and their individual behavior related to mask wearing. Finally they execute their activities: they find the activity corresponding to the current time, and act in accordance. 
+
+
+## Design Concepts
+
+### Basic principles
+
+As far as the epidemiological dynamics is concerned, we rely on much scientific evidence that the disease could be represented by a SEIR model with an infectious state that can be presymptomatic, symptomatic or asymptomatic, with a certain degree of survivability of the virus in the environment and the possibility of people being infected by it.
+
+The `Individual` agents’ behavior is described using an activity-based approach: people have a set of activities associated with some corresponding time. This agenda makes the agents move from room to room (and eventually from building to building) and enter/leave the simulated area. 
+
+
+### Interaction
+
+`Individual` agents can infect other `Individual` agents directly through contact or indirectly through room and/or unit cell contamination: Infectious `Individual` agents can release a viral load in a unit cell and/or in a room agent and, as the virus can survive in the `Building` for a period of time, a unit cell and a room agent with a viral load will possibly infect the `Individual` agents located in it, following the assumption that contaminated surfaces such as doorknobs, tables, on which the virus can survive, are possible transmission pathways. 
+
+
+## Details
+
+### Initialization 
+In order to keep the model as generic as possible, many parameters and initial values are stored in case-dependent external files. Two parameter files for epidemiological model and activity types links to building types are stored in a general purpose parameter folder. In order to use them in a custom version of COMOKIT, users should either redefine them or give the path to this folder relative to the new project.
+
+## Submodels
+
+### Epidemiological submodel
+
+The epidemiological model is based on the SEIR model with an infectious state that can be presymptomatic, symptomatic or asymptomatic. Once the infectious period is over, `Individual` agents reach the Removed (R) state, representing the fact that the `Individual` has been infected, but is not infectious anymore. To represent deaths and recoveries, we decided to consider  the current clinical status of the Individual agent: when it becomes symptomatic, an `Individual` will first need hospitalisation, and then (with a given probability) ICU. If the Individual agent is not being taken to a `Hospital` before the end of its expected period needing ICU, it will be considered as dead due to lack of treatment. In the case, it went to ICU when needed, it has a probability to recover. 
+
+The various (incubation...) periods and probabilities are `Individual`dependent and are randomly picked following various distributions.
