@@ -7,11 +7,11 @@ permalink: /odd
 # Short description of the COMOKIT tookit
 COMOKIT proposes 3 models based on a common foundation, each adapted to a different scale of analysis: the Meso model corresponds to the historical model of COMOKIT and is adapted to simulations at the scale of a neighborhood or a small city. The Micro model allows to represent explicitly the movements of people and is adapted to simulations at the scale of a building or a small set of buildings. Finally, COMOKIT macro, which does not propose an individual representation of people, is adapted to perform large-scale simulations.
 
+## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
-
 ---
 
 # Description of the COMOKIT Meso model
