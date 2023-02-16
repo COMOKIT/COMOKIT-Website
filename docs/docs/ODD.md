@@ -5,6 +5,7 @@ nav_order: 10
 permalink: /odd
 ---
 # Short description of the COMOKIT tookit
+{: .no_toc }
 COMOKIT proposes 3 models based on a common foundation, each adapted to a different scale of analysis: the Meso model corresponds to the historical model of COMOKIT and is adapted to simulations at the scale of a neighborhood or a small city. The Micro model allows to represent explicitly the movements of people and is adapted to simulations at the scale of a building or a small set of buildings. Finally, COMOKIT macro, which does not propose an individual representation of people, is adapted to perform large-scale simulations.
 
 ## Table of contents
@@ -15,7 +16,6 @@ COMOKIT proposes 3 models based on a common foundation, each adapted to a differ
 ---
 
 # Description of the COMOKIT Meso model
-{: .no_toc }
 We describe in this section the COMOKIT Meso model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Meso_v2.pdf)).
 
 
@@ -103,7 +103,6 @@ The `Authority` agent is in charge of applying one or several mitigation policie
 ---
 
 # Description of the COMOKIT Micro model
-{: .no_toc }
 We describe in this section the COMOKIT Micro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Micro_v2.pdf)).
 
 ## Overview 
@@ -175,7 +174,6 @@ The various (incubation...) periods and probabilities are `Individual`dependent 
 ---
 
 # Description of the COMOKIT Meso model
-{: .no_toc }
 We describe in this section the COMOKIT Macro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Macro_v2.pdf)).
 
 
