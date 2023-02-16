@@ -5,21 +5,15 @@ nav_order: 10
 permalink: /odd
 ---
 # Short description of the COMOKIT tookit
-{: .no_toc }
 COMOKIT proposes 3 models based on a common foundation, each adapted to a different scale of analysis: the Meso model corresponds to the historical model of COMOKIT and is adapted to simulations at the scale of a neighborhood or a small city. The Micro model allows to represent explicitly the movements of people and is adapted to simulations at the scale of a building or a small set of buildings. Finally, COMOKIT macro, which does not propose an individual representation of people, is adapted to perform large-scale simulations.
+
+{: .no_toc .text-delta }
+
+---
 
 # Description of the COMOKIT Meso model
 {: .no_toc }
 We describe in this section the COMOKIT Meso model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Meso_v2.pdf)).
-{: .fs-6 .fw-300 }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
 
 
 ## Overview 
@@ -103,19 +97,11 @@ Once weekly and daily agendas have been created at initialization, `Individual` 
 
 The `Authority` agent is in charge of applying one or several mitigation policies on the whole case study or on some local spaces. The policies can impact the simulation in two ways. Every step, the `Authority` can proactively perform some actions encoded in the policy, e.g. conduct a given number of tests on the population. On the other hand, each `Individual` agent asks the `Authority` whether it is allowed to execute a given `Activity`. In this case, the `Authority` will make its choice based on what is allowed by its policies that are currently applied.
 
+---
+
 # Description of the COMOKIT Micro model
 {: .no_toc }
 We describe in this section the COMOKIT Micro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Micro_v2.pdf)).
-{: .fs-6 .fw-300 }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
 
 ## Overview 
 
@@ -182,18 +168,13 @@ The epidemiological model is based on the SEIR model with an infectious state th
 The various (incubation...) periods and probabilities are `Individual`dependent and are randomly picked following various distributions.
 
 
+
+---
+
 # Description of the COMOKIT Meso model
 {: .no_toc }
 We describe in this section the COMOKIT Macro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Macro_v2.pdf)).
-{: .fs-6 .fw-300 }
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
 
 
 ## Overview 
