@@ -4,11 +4,13 @@ title: Model description
 nav_order: 10
 permalink: /odd
 ---
+# Short description of the COMOKIT tookit
+COMOKIT proposes 3 models based on a common foundation, each adapted to a different scale of analysis: the Meso model corresponds to the historical model of COMOKIT and is adapted to simulations at the scale of a neighborhood or a small city. The Micro model allows to represent explicitly the movements of people and is adapted to simulations at the scale of a building or a small set of buildings. Finally, COMOKIT macro, which does not propose an individual representation of people, is adapted to perform large-scale simulations.
 
-# Short description of the COMOKIT model
+# Description of the COMOKIT Meso model
 {: .no_toc }
 
-We describe in this page the COMOKIT model (version 1.0.1) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_v1.0.1.pdf)).
+We describe in this page the COMOKIT Meso model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Meso_v2.pdf)).
 {: .fs-6 .fw-300 }
 
 ## Table of contents
