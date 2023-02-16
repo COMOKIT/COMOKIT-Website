@@ -173,7 +173,7 @@ The various (incubation...) periods and probabilities are `Individual`dependent 
 
 ---
 
-# Description of the COMOKIT Meso model
+# Description of the COMOKIT Macro model
 We describe in this section the COMOKIT Macro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Macro_v2.pdf)).
 
 
