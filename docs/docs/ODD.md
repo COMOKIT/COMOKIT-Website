@@ -10,7 +10,7 @@ COMOKIT proposes 3 models based on a common foundation, each adapted to a differ
 
 # Description of the COMOKIT Meso model
 {: .no_toc }
-We describe in this page the COMOKIT Meso model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Meso_v2.pdf)).
+We describe in this section the COMOKIT Meso model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Meso_v2.pdf)).
 {: .fs-6 .fw-300 }
 
 ## Table of contents
@@ -105,7 +105,7 @@ The `Authority` agent is in charge of applying one or several mitigation policie
 
 # Description of the COMOKIT Micro model
 {: .no_toc }
-We describe in this page the COMOKIT Micro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Micro_v2.pdf)).
+We describe in this section the COMOKIT Micro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Micro_v2.pdf)).
 {: .fs-6 .fw-300 }
 
 ## Table of contents
@@ -180,3 +180,91 @@ In order to keep the model as generic as possible, many parameters and initial v
 The epidemiological model is based on the SEIR model with an infectious state that can be presymptomatic, symptomatic or asymptomatic. Once the infectious period is over, `Individual` agents reach the Removed (R) state, representing the fact that the `Individual` has been infected, but is not infectious anymore. To represent deaths and recoveries, we decided to consider  the current clinical status of the Individual agent: when it becomes symptomatic, an `Individual` will first need hospitalisation, and then (with a given probability) ICU. If the Individual agent is not being taken to a `Hospital` before the end of its expected period needing ICU, it will be considered as dead due to lack of treatment. In the case, it went to ICU when needed, it has a probability to recover. 
 
 The various (incubation...) periods and probabilities are `Individual`dependent and are randomly picked following various distributions.
+
+
+# Description of the COMOKIT Meso model
+{: .no_toc }
+We describe in this section the COMOKIT Macro model (version 2.0) using the standard O.D.D. protocol ([the full description is also available](https://comokit.org/ressources/ODD-COMOKIT_Macro_v2.pdf)).
+{: .fs-6 .fw-300 }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+
+## Overview 
+
+### Purpose
+
+This model aims at simulating and comparing the application of COVID-19 spread mitigation policies at the scale of a big city or a country, the transmission of the disease being modeled at the scale of individual groups. Its purpose is to support decision makers and researchers in answering questions such as: Is the containment of a neighborhood more effective than that of an entire city? Does closing schools decrease the transmission peaks ? How does wearing masks impact the dynamics of the epidemic ? How long should a lockdown ideally last ? What proportion of the population should be allowed to undertake activities during a lockdown ?
+
+One case study is provided with the model: the province (Région) of Alpes-Maritimes in France. 
+
+
+### Entities, state variables, and scales
+
+#### Scales
+
+The model has been designed to be adapted to any scale and in particular to city and country scales. The spatial units considered can represent an individual building, a neighborhood, a city, a region or even a country.
+
+The simulations are not launched from a specific starting date, but rather from the introduction of the first infected cases in the population and will run until the end of the epidemic. The simulation step is by default set to 1 hour (but it is possible to take into account a less fine time step). As a consequence, movements from one activity place to another one are not simulated: groups of individuals are always located in an activity place. The underlying assumption is that no infection cannot occur during the travel time.
+
+
+#### Entities
+
+The model is designed to simulate the COVID-19 spread at the individual group scale. As a consequence, the core entity of the model is `Group` type of agents (or species): it represents a homogenous group of individual inhabitants that share similar characteristics with respect to the disease and governance response (incubation time, likelihood of hospitalization, likelihood of wearing a mask, likelihood of following restrictions…). A Group allows to know for each epidemiological status (susceptible, latent, pre-symptomatic, symptomatic, asymptomatic…), the number of individuals in the group with that status. To take into account the temporal evolution of the disease, the number of individuals in each status is not kept as a simple integer, but as a table, each cell of the table corresponds to one day, e.g. the integer in the second cell of the table corresponding to the latent status corresponds to the number of individuals in the latent status for 2 days.
+
+Another important type of agent is `Compartment`, which is an encapsulation of a Group, which represents a group of inhabitants living in the same Spatial_unit and which shares the same agenda. The agenda describes, depending on the day of the week and the time of day, the number of people in the `Compartment` who will go to each `Spatial_unit`, to perform this or that type of activity in the different types of buildings.
+
+`Spatial_unit` agents are spatial entities where the individuals can perform an activity. They are characterized by a set of `Compartment` agents representing the inhabitants of the area, by a set of building types and for each one by the area that it represents, and finally by a set of `Group` agents representing at the current time step the individuals that are located in the area for each type of building.
+
+As our main goal is to simulate and compare the application of various mitigation and control policies, a specific focus is made on policies that modify the population behavior to reduce contacts and thus infection between people. As a consequence, the possibility for individuals of `Compartment` agents to carry out an activity in a given `Spatial_unit` and building type is constrained by the allowance of the `Authority` agent. This agent manages the various `Policy` that are adopted. When a `Compartment` agent asks it for authorization to perform an activity, the `Authority` asks all the policies it has adopted the allowance rate for the `Compartment` to do the given `Activity`. Examples of `Policy` include total containment, close the schools, close the work spaces… These policies can be limited to a given area (using `SpatialPolicy`) or be more or less tolerant (e.g. containment can be for every body or for every body but some people, or some rate of the population, using `PartialPolicy`).
+
+
+### Process overview and scheduling
+The dynamics of the model can thus be summarized by four main dynamics: the epidemic status updating of `Compartment` agents, the activities of the Compartment agents,  the disease spreading, and the dynamics of policy adoption and application.
+
+At the beginning of each new day, the epidemiological status of the group of each Compartment agent is updated. More precisely, for each epidemiological status, the number of individuals in each cell will be transferred to the next cell, corresponding to the next day. For the number of individuals in the last cell, transition rates to new statuses are used to know to which status these individuals will be transferred. 
+
+The most important dynamic, which is triggered at each simulation step, is the movement of individuals to conduct their activity. More precisely, each Compartment agent will calculate according to its agenda and current policies the number of individuals who will go to each `Spatial_unit` agent to conduct their activity in a given type of building. This number will then be managed as a group agent located in the target `Spatial_unit` agent and linked to a building type. The set of these groups will then allow to calculate the number of susceptible individuals that will be infected for each `Compartment` agent.
+
+Finally, the `Authority` agent checks its current `Policy` and tries to apply it (e.g. executing a test campaign for example).
+
+
+## Design Concepts
+
+### Basic principles
+
+As far as the epidemiological dynamics is concerned, we rely on much scientific evidence that the disease could be represented by a SEIR model with an infectious state that can be presymptomatic, symptomatic or asymptomatic, with a certain degree of survivability of the virus in the environment and the possibility of people being infected by it.
+
+The individual group agents’ behavior is described using an activity-based approach: people have a set of activities associated with some day hours. This agenda makes the individuals in the group jump between spatial units and types of buildings. 
+
+
+### Interaction
+
+The first type of interaction is the dynamics of contamination. `Group` agents in the same spatial unit and in the same types of buildings will contaminate each other. 
+Interactions between Compartment agents and the `Authority` agents occur in both directions: Compartment agents ask the `Authority`’s authorization to execute a given `Activity` and reversely the `Authority` agents can apply a `Policy` to check the epidemic state of the individuals inside the `Compartment` agents.
+
+
+## Details
+
+### Initialization
+
+In order to keep the model as generic as possible, many parameters and initial values are stored in case-dependent external files. A parameter file for the epidemiological model is stored in a general purpose parameter folder. In order to use it in a custom version of COMOKIT, users should either redefine them or give the path to this folder relative to the new project (for example, see Template Projects in COMOKIT). 
+
+## Submodels
+
+### Epidemiological submodel
+
+The epidemiological model is based on the SEIR model with an infectious state that can be presymptomatic, symptomatic or asymptomatic. Once the infectious period is over, `Individual` agents reach the Removed (R) state, representing the fact that the `Individual` has been infected, but is not infectious anymore. To represent deaths and recoveries, we decided to consider  the current clinical status of the Individual agent: when it becomes symptomatic, an `Individual` will first need hospitalisation, and then (with a given probability) ICU. If the Individual agent is not being taken to a `Hospital` before the end of its expected period needing ICU, it will be considered as dead due to lack of treatment. In the case, it went to ICU when needed, it has a probability to recover. 
+
+The various (incubation...) periods and probabilities are `Individual`dependent and are randomly picked following various distributions.
+
+
+### Institutions
+
+The `Authority` agent is in charge of applying one or several mitigation policies on the whole case study or on some local spaces. The policies can impact the simulation in two ways. Every step, the `Authority` can proactively perform some actions encoded in the policy, e.g. conduct a given number of tests on the population. On the other hand, each `Individual` agent asks the `Authority` whether it is allowed to execute a given `Activity`. In this case, the `Authority` will make its choice based on what is allowed by its policies that are currently applied.
