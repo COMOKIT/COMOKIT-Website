@@ -6,7 +6,7 @@ permalink: /version1
 search_exclude: true
 ---
 
-# Version 1.0.1 of COMOKIT is now available !
+# Version 1.0.1 of COMOKIT (old version)
 {: .no_toc }
 
 <p align="center">
