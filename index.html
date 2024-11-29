@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>COMOKIT</title>
+	<meta content="" name="descriptison">
+	<meta content="" name="keywords">
+
+	<!-- Favicons -->
+	<link href="assets/img/logo.png" rel="icon">
+	<link href="assets/img/logo.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+	<link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top d-flex align-items-center">
+		<div class="container d-flex align-items-center">
+
+			<div class="logo mr-auto">
+				<h1 class="text-light"><a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"><span> COMOKIT</span></a></h1>
+			</div>
+
+			<nav class="nav-menu d-none d-lg-block">
+				<ul>
+					<li class="d-none d-xl-block active"><a href="#header">Home</a></li>
+					<li class="d-none d-xl-block"><a href="#about">About</a></li>
+					<li class="d-none d-xl-block"><a href="#base">Model</a></li>
+					<li class="d-none d-xl-block"><a href="#examples">Examples</a></li>
+					<li class="d-none d-xl-block"><a href="#press">Press</a></li>
+					<li class="d-none d-xl-block"><a href="#team">Team</a></li>
+					<li class="get-started-white"><a class="btn-get-started" href="./docs/">Documentation</a></li>
+					<li class="get-started-white"><a class="btn-get-started" href="https://github.com/COMOKIT/COMOKIT-Model">Sources</a></li>
+					<li class="get-started"><a href="https://github.com/COMOKIT/COMOKIT-Model/releases/">Download</a></li>
+				</ul>
+			</nav><!-- .nav-menu -->
+
+		</div>
+	</header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+	<section id="hero" class="d-flex align-items-center">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+					<h1 data-aos="fade-up">COMOKIT (CoVid19 Modeling Kit)</h1>
+					<h2 data-aos="fade-up" data-aos-delay="400">a modeling kit written in <a href="http://gama-platform.org">GAMA</a> for analyzing and comparing interventions against the COVID-19 epidemic at the scale of a city</h2>
+				</div>
+				<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+					<img src="assets/img/COMOKIT2.png" class="img-fluid animated" alt="">
+				</div>
+			</div>
+			<div class="row" style="margin-top: 70px;">
+				<div data-aos="fade-up" data-aos-delay="800" class="aos-init aos-animate">
+					<small>	
+						Read the <a href="https://www.frontiersin.org/articles/10.3389/fpubh.2020.563247" target="_blank">reference paper</a>:
+						<br/>
+						Gaudou, B., Huynh, N. D., Philippon, D., Brugière, A., Chapuis, K., Taillandier, P., Larmande, P., and Drogoul, A. (2020) COMOKIT: a modeling kit to understand, analyze and compare the impacts of mitigation policies against the COVID-19 epidemic at the scale of a city . Front. Public Health. doi: <a href="https://doi.org/10.3389/fpubh.2020.563247" target="_blank">10.3389/fpubh.2020.563247</a>
+						<hr/>
+						Read the <a href="https://rofasss.org/2020/04/27/comokit/" target="_blank">position paper</a>:
+						<br/>
+						Drogoul, A., Taillandier, P., Gaudou, B., Choisy, M., Chapuis, K., Huynh, N. Q., Nguyen, N. D., Philippon, D., Brugière, A., and Larmande, P. (2020) Designing social simulation to (seriously) support decision-making: COMOKIT, an agent-based modelling toolkit to analyze and compare the impacts of public health interventions against COVID-19. Review of Artificial Societies and Social Simulation, 27th April 2020. 
+					</small>
+				</div>
+			</div>
+		</div>
+
+	</section><!-- End Hero -->
+
+  <main id="main">
+
+	<!-- ======= Banner Section ======= -->
+	<section id="banner" class="clients" style="background-color: #EFB54F;"> <!--C46B46-->
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col">
+				<p style="color: white; text-decoration: blink; margin: 0;">
+					 <a href="https://comokit.org/docs/version2" style="color: white; text-decoration: underline;"><b>Version 2.0</b> is out !</a>
+				</p>
+			</div>
+
+		</div>
+
+	</div>
+	</section><!-- End Banner Section -->
+
+	<!-- ======= Clients Section ======= -->
+	<section id="clients" class="clients">
+	<div class="container">
+
+		<div class="row row-images">
+
+			<div class="col-md-3 col-6">
+				<img src="assets/img/logos/ird.png" class="img-fluid" alt="" data-aos="zoom-in">
+			</div>
+
+			<div class="col-md-3 col-6">
+				<img src="assets/img/logos/thuyloi.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+			</div>
+
+			<div class="col-md-3 col-6">
+				<img src="assets/img/logos/cantho.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
+			</div>
+
+			<div class="col-md-3 col-6">
+				<img src="assets/img/logos/inrae.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
+			</div>
+
+		</div>
+
+		<div class="row row-images">
+
+			<div class="col-md-4 col-6">
+				<img src="assets/img/logos/hku.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
+			</div>
+
+			<div class="col-md-4 col-6">
+				<img src="assets/img/logos/toulouse.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+			</div>
+
+			<div class="col-md-4 col-6">
+				<img src="assets/img/logos/nihe.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="600">
+			</div>
+
+		</div>
+
+	</div>
+	</section><!-- End Clients Section -->
+
+	<!-- ======= About Us Section ======= -->
+	<section id="about" class="about">
+		<div class="container">
+
+		<div class="section-title" data-aos="fade-up">
+			<h2>Presentation</h2>
+		</div>
+
+		<div class="row content">
+			<div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+				<p>
+					Public health policies implemented against the CoVid19 pandemic raise a number of questions. 
+				</p>
+				<p>
+					The <a target="_blank" href="https://en-vietnam.ird.fr/">Institut de recherche pour le développement (IRD) in Vietnam</a> 
+					has set up a multidisciplinary team of researchers from its research units 
+					<a target="_blank" href="https://www.ummisco.fr/">UMMISCO</a>, 
+					<a target="_blank" href="https://www.mivegec.ird.fr/en/">MIVEGEC</a> and 
+					<a target="_blank" href="https://diade.ird.fr/en">DIADE</a>, assisted by colleagues 
+					from <a target="_blank" href="http://en.tlu.edu.vn/">Thuyloi University</a>, 
+					<a target="_blank" href="https://en.ctu.edu.vn/">Can Tho University</a>, 
+					<a target="_blank" href="https://www.inrae.fr/en">INRAE</a> and 
+					<a target="_blank" href="https://sph.hku.hk/en/">SPH-HKU</a>, 
+					to design a realistic spatial computer model called COMOKIT, 
+					on the <a target="_blank" href="http://gama-platform.org">GAMA</a> modeling and simulation platform. 
+				</p>
+				<p>
+					With the support of <a href="http://www.anrs.fr/en" target="_blank">ANRS</a> (ANRS COV23 COMOKIT) and <a href="https://www.edf.fr/en/the-edf-group/who-we-are/activities/research-and-development" target="_blank">EDF R&D</a>.
+				</p>
+			</div>
+			<div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+				<p>	
+					COMOKIT aims to help decision makers answer the most pressing questions by using integrated models adapted to different scales of analysis that combine: 
+				</p>
+				<ul>
+					<li><i class="ri-check-double-line"></i> A sub-model of individual clinical dynamics and epidemiological status</li>
+					<li><i class="ri-check-double-line"></i> A sub-model of direct transmission of the infection from agent to agent</li>
+					<li><i class="ri-check-double-line"></i> A sub-model of environmental transmission through the built environment</li>
+					<li><i class="ri-check-double-line"></i> A sub-model of policy and interventions design and implementation</li>
+					<li><i class="ri-check-double-line"></i> An agenda-based model of people activities</li>
+				</ul>
+			</div>
+			<div class="col-lg-12 pt-4 pt-lg-0 text-center" data-aos="fade-up" data-aos-delay="450">
+				<a href="./docs/" class="btn-learn-more scrollto" style="margin-right: 2em;">Documentation</a>
+				<a href="https://github.com/COMOKIT/COMOKIT-Model/releases" class="btn-get-started-reversed">Download</a>
+			</div>
+		</div>
+
+		</div>
+	</section><!-- End About Us Section -->
+
+	<!-- ======= Base Section ======= -->
+	<section id="base" class="services section-bg">
+	  <div class="container">
+
+		<div class="section-title" data-aos="fade-up">
+		  <h2>Model</h2>
+		  <p>The base model represents the spread of COVID-19 and the impact of control policies at the scale of a commune (~ 10.000 inhabitants) using:</p>
+		</div>
+
+		<div class="row">
+		  <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+			<div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+			  <div class="icon"><i class="icofont-people"></i></div>
+			  <h4 class="title"><a href="">An <i>Agent-Based</i> approach</a></h4>
+			  <p class="description">Each inhabitant is represented individually with his/her specific characteristics (age, sex, household), clinical state and daily activities based on a generated agenda</p>
+			</div>
+		  </div>
+
+		  <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+			<div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+			  <div class="icon"><i class="ri-shield-star-line"></i></div>
+				<h4 class="title"><a href="">A <i>Flexible Policy</i> representation</a></h4>
+			  <p class="description">An Authority agent can be programmed to apply public health control policies consisting of a combination of mitigation measures and interventions. </p>
+			</div>
+		  </div>
+
+		  <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+			<div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+			  <div class="icon"><i class="icofont-files-stack"></i></div>
+			  <h4 class="title"><a href="">Numerous <i>Realistic Scenarios</i></a></h4>
+			  <p class="description">Each set of parameters (incl. the policies applied) represents a scenario, which can be explored by executing several simulations and compared against other scenarios in more elaborate experiments.</p>
+			</div>
+		  </div>
+
+		  <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+			<div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+			  <div class="icon"><i class="ri-chat-check-line"></i></div>
+			  <h4 class="title"><a href="">A <i>High Portability</i></a></h4>
+			  <p class="description">In most cases, only a file containing the built environment may be enough to build a simple model. More realistic scenarios will of course require more detailed datasets.</p>
+			</div>
+		  </div>
+		</div>
+
+		<div class="col-lg-12 pt-4 pt-lg-0 text-center" style="margin-top: 50px;" data-aos="fade-up" data-aos-delay="450">
+			<a href="./ressources/ODD-COMOKIT_v2.pdf" target="_blank" class="btn-get-started-reversed">Read the ODD description of the models</a>
+		</div>
+
+	  </div>
+	</section><!-- End Base Section -->
+
+	<!-- ======= Portfolio Section ======= -->
+	<section id="examples" class="portfolio">
+	  <div class="container">
+
+		<div class="section-title" data-aos="fade-up">
+		  <h2>Examples</h2>
+		  <p>Here are some examples of COMOKIT in action</p>
+		</div>
+
+		<div class="row" data-aos="fade-up" data-aos-delay="200">
+		  <div class="col-lg-12 d-flex justify-content-center">
+			<ul id="portfolio-flters-ex">
+			  <li data-filter="*" class="filter-active">All</li>
+			  <li data-filter=".filter-activity">Activity restrictions</li>
+			  <li data-filter=".filter-lock">Lockdown</li>
+			<!--  <li data-filter=".filter-hosp">Hospitalisations</li> -->
+			  <li data-filter=".filter-physical">Physical Interventions</li>
+			  <li data-filter=".filter-sensitivity">Sensitivity Analysis</li>
+			</ul>
+		  </div>
+		</div>
+
+		<div class="row portfolio-container-ex" data-aos="fade-up" data-aos-delay="400">
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-ex filter-activity">
+		  	<a href="https://www.youtube.com/watch?v=4AxIPHSZZkQ" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.ytimg.com/vi/4AxIPHSZZkQ/sddefault.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Simulation of containment measures against CoVid19 using GAMA</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-ex">
+		  	<a href="https://www.youtube.com/watch?v=PxFljiGkXrc" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.ytimg.com/vi/PxFljiGkXrc/sddefault.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Side by side simulation of CoVid19 propagation in two case studies</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-ex filter-physical">
+		  	<a href="https://www.youtube.com/watch?v=FYehyECkoh4" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.ytimg.com/vi/FYehyECkoh4/sddefault.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Comparing the impacts of different proportions of people wearing masks</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-ex filter-sensitivity">
+		  	<a href="https://www.youtube.com/watch?v=wmgx5FlAxFE" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.ytimg.com/vi/wmgx5FlAxFE/sddefault.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Inter-human and environmental transmissions</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-ex filter-lock">
+		  	<a href="https://www.youtube.com/watch?v=he-dvtHDXZE" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.ytimg.com/vi/he-dvtHDXZE/sddefault.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Impact of a realistic home containment policy</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-ex filter-lock">
+		  	<a href="https://www.youtube.com/watch?v=uxMUnmaYQQY" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.ytimg.com/vi/uxMUnmaYQQY/sddefault.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Impact of the duration of the lockdown on the peak of the epidemics</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		</div>
+
+	  </div>
+	</section><!-- End Portfolio Section -->
+
+	<!-- ======= Press Section ======= -->
+	<section id="press" class="portfolio section-bg">
+	  <div class="container">
+
+		<div class="section-title" data-aos="fade-up">
+		  <h2>Press</h2>
+		</div>
+
+		<div class="row" data-aos="fade-up" data-aos-delay="200">
+		  <div class="col-lg-12 d-flex justify-content-center">
+			<ul id="portfolio-flters-pr">
+			  <li data-filter="*" class="filter-active">All</li>
+			  <li data-filter=".filter-fr">French</li>
+			  <li data-filter=".filter-en">English</li>
+			  <li data-filter=".filter-it">Italian</li>
+			  <li data-filter=".filter-vn">Vietnamese</li>
+			</ul>
+		  </div>
+		</div>
+
+			<!-- ======= ARTICLES ======= -->
+		<div class="section-title" data-aos="fade-up">
+		  <h3>Articles</h3>
+		</div>
+
+		<div class="row portfolio-container-pr" data-aos="fade-up" data-aos-delay="400">
+
+			<!-- FR -->
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-fr">
+		  	<a href="https://www.edf.fr/groupe-edf/qui-sommes-nous/activites/recherche-et-developpement/toutes-les-actualites-de-la-r-d/la-r-d-d-edf-et-des-equipes-de-l-ird-s-allient-dans-la-lutte-contre-la-covid-19" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://logo-logos.com/wp-content/uploads/2016/11/EDF_logo.png" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>La R&D d'EDF et des équipes de l'IRD s'allient dans la lutte contre la Covid-19</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-fr filter-en">
+		  	<a href="https://www.ird.fr/comokit-0" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://www.iybssd2022.org/wp-content/uploads/IRD-Logo-EN-Long.jpeg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>COMOKIT (Several languages available)</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-fr">
+		  	<a href="https://vn.ambafrance.org/COMOKIT-nouvel-outil-performant-sur-les-politiques-d-intervention" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://www.rotasturisticas.com/imagens/sectores/ao/large/SEC-13543-14970-ambassade_de_france_a_luanda.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>COMOKIT, nouvel outil performant sur les politiques d’intervention</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-fr">
+		  	<a href="https://www.futura-sciences.com/sante/actualites/coronavirus-coronavirus-ia-evaluer-efficacite-politiques-sanitaires-80992/" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/6/c/d/6cd10bf7bf_50163556_modelisation-covid.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Coronavirus : une IA pour évaluer l'efficacité des politiques sanitaires</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+			<!-- EN -->
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-en">
+		  	<a href="https://news.ors.ai/coronavirus-an-ai-to-assess-the-effectiveness-of-health-policies/" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://news.ors.ai/wp-content/uploads/2020/06/2.png" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Coronavirus: an AI to assess the effectiveness of health policies</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+			<!-- IT -->
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-it">
+		  	<a href="https://www.ilsussidiario.net/news/intelligenza-artificiale-contro-coronavirus-studio-in-corso-su-popolazioni-simulate/2023855/" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://cdnx.ilsussidiario.net/wp-content/uploads/2020/05/17/Intelligenza_artificiale_Coronavirus_lapresse_2020.jpg" class="img-fluid" alt="">
+					<div class="portfolio-info">
+						<h4>Intelligenza artificiale contro Coronavirus/ Studio in corso su popolazioni simulate</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+		</div>
+			<!-- ======= VIDEO ======= -->
+
+		<div class="section-title" data-aos="fade-up">
+		  <h3>Videos</h3>
+		</div>
+
+		<div class="row portfolio-container-pr" data-aos="fade-up" data-aos-delay="400">
+
+
+			<!-- FR -->
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-fr">
+		  	<a href="https://www.youtube.com/watch?v=EQYBluFTRJY" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.ytimg.com/vi/EQYBluFTRJY/sddefault.jpg" class="img-fluid" alt="Youtube EDF">
+					<div class="portfolio-info">
+						<h4>L'EDF R&D et l’IRD face au Covid 19 grâce à l’IA</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+
+			<!-- VN -->
+		  <div class="col-lg-4 col-md-6 portfolio-item-pr filter-vn">
+		  	<a href="https://vtv.vn/video/song-moi-09-8-2020-453234.htm" target="_blank">
+				<div class="portfolio-wrap">
+					<img src="https://i.imgur.com/dtVVCZi.png" class="img-fluid" alt="VTV1 COMOKIT">
+					<div class="portfolio-info">
+						<h4>Vietnamese official TV news (from 21:00)</h4>
+					</div>
+				</div>
+			</a>
+		  </div>
+		</div>
+
+		<div class="col-lg-12 pt-4 pt-lg-0 text-center" style="margin-top: 50px;" data-aos="fade-up" data-aos-delay="450">
+			<a href="./docs/press" target="_blank" class="btn-get-started-reversed">See more articles</a>
+		</div>
+
+	  </div>
+	</section><!-- End Press Section -->
+
+	<!-- ======= Team Section ======= -->
+	<section id="team" class="team">
+	  <div class="container">
+
+		<div class="section-title" data-aos="fade-up">
+		  <h2>Team</h2>
+		  <p>The people behind COMOKIT</p>
+		</div>
+
+		<div class="row">
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="100">
+			  <div class="member-info">
+				<h4>Alexis Drogoul</h4>
+				<span>UMI 209, UMMISCO, IRD, Sorbonne Université, Bondy, France.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="100">
+			  <div class="member-info">
+				<h4>Patrick Taillandier</h4>
+				<span>UR 875, MIAT, INRAE, Toulouse University, Castanet Tolosan, France.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="100">
+			  <div class="member-info">
+				<h4>Benoit Gaudou</h4>
+				<span>UMI 209, UMMISCO, IRD, Sorbonne Université, Bondy, France.</span>
+				<span>UMR 5505, IRIT, Université Toulouse 1 Capitole, Toulouse, France.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="100">
+			  <div class="member-info">
+				<h4>Marc Choisy</h4>
+				<span>UMR 5290, MIVEGEC, IRD/CNRS/Univ. Montpellier, Montpellier, France.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="200">
+			  <div class="member-info">
+				<h4>Kevin Chapuis</h4>
+				<span>UMI 209, UMMISCO, IRD, Sorbonne Université, Bondy, France.</span>
+				<span>UMR 228, ESPACE-DEV, IRD, Montpellier, France.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="200">
+			  <div class="member-info">
+				<h4>Quang Nghi Huynh</h4>
+				<span>UMI 209, UMMISCO, IRD, Sorbonne Université, Bondy, France.</span>
+				<span>CICT, Can Tho University, Can Tho, Vietnam.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="200">
+			  <div class="member-info">
+				<h4>Ngoc Doanh Nguyen</h4>
+				<span>UMI 209, UMMISCO, IRD, Sorbonne Université, Bondy, France.</span>
+				<span>MSLab / WARM, Thuyloi University, Hanoi, Vietnam.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="200">
+			  <div class="member-info">
+				<h4>Pham Quang Thai</h4>
+				<span>National Institute Of Hygiene And Epidemiology (Viện Vệ sinh dịch tễ Trung ương (NIHE)), Hanoi, Vietnam.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="200">
+			  <div class="member-info">
+				<h4>Damien Philippon</h4>
+				<span>WHO Collaborating Centre for Infectious Disease Epidemiology and Control, School of Public Health, Li Ka Shing Faculty of Medicine, The University of Hong Kong, Hong Kong Special Administrative Region, China.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="300">
+			  <div class="member-info">
+				<h4>Arthur Brugière</h4>
+				<span>UMI 209, UMMISCO, IRD, Sorbonne Université, Bondy, France.</span>
+				<span>WARM, Thuyloi University, Hanoi, Vietnam.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="300">
+			  <div class="member-info">
+				<h4>Pierre Larmande</h4>
+				<span>UMR 232, DIADE, IRD, Univ. Montpellier, Montpellier, France.</span>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+			<div class="member" data-aos="fade-up" data-aos-delay="300">
+			  <div class="member-info">
+				<h4>François Sempé</h4>
+				<span>External consultant, EDF R&D, France.</span>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+	  </div>
+	</section><!-- End Team Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+	<div class="container">
+	  <div class="row d-flex align-items-center">
+		<div class="col-lg-6 text-lg-left text-center">
+		  <div class="copyright">
+			&copy; Copyright <strong>COMOKIT</strong>. All Rights Reserved
+		  </div>
+		</div>
+		<div class="col-lg-6">
+		  <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+			<a href="#header" class="scrollto">Home</a>
+			<a href="./docs/" class="scrollto">Docs</a>
+			<a href="https://github.com/COMOKIT/"><i class="ri-github-fill"></i></a>
+		  </nav>
+		</div>
+	  </div>
+	</div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
