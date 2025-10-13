@@ -31,7 +31,8 @@ Please also refer to the [official GAMA documentation](https://gama-platform.git
 
 If you use COMOKIT in your research and want to cite it (in a paper, presentation, whatever), please use this reference:
 
-> Gaudou, B., Huynh, N. D., Philippon, D., Brugière, A., Chapuis, K., Taillandier, P., Larmande, P., and Drogoul, A. (2020) COMOKIT: a modeling kit to understand, analyze and compare the impacts of mitigation policies against the COVID-19 epidemic at the scale of a city . Front. Public Health., [doi:10.3389/fpubh.2020.563247]
+> Taillandier, P., Chapuis, K., Gaudou, B., Brugière, A., & Drogoul, A. (2024). COMOKIT v2: A multi-scale approach to modeling and simulating epidemic control policies. Plos one, 19(3), e0299626. [doi:10.1371/journal.pone.0299626]
+> _Gaudou, B., Huynh, N. D., Philippon, D., Brugière, A., Chapuis, K., Taillandier, P., Larmande, P., and Drogoul, A. (2020) COMOKIT: a modeling kit to understand, analyze and compare the impacts of mitigation policies against the COVID-19 epidemic at the scale of a city . Front. Public Health., [doi:10.3389/fpubh.2020.563247]_
 
 or you can choose to cite the website instead:
 
